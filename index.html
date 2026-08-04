@@ -1,0 +1,666 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>焼肉事業 進行まとめ</title>
+<style>
+:root{
+  --bg:#fbfaf8; --card:#fff; --ink:#1c1a17; --sub:#6b655c; --line:#e6e1d8;
+  --accent:#a8402f; --accent-soft:#f6ece9; --gold:#9a7b3f; --ok:#2f6b4f; --warn:#b0741c;
+  --shadow:0 1px 2px rgba(28,26,23,.05),0 8px 24px rgba(28,26,23,.06);
+}
+@media (prefers-color-scheme:dark){
+  :root{ --bg:#15130f; --card:#1e1b16; --ink:#efeae1; --sub:#a29a8c; --line:#332e26;
+    --accent:#e0705c; --accent-soft:#2a1d19; --gold:#c9a76a; --ok:#6fbf95; --warn:#e0a84f;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35);}
+}
+:root[data-theme="dark"]{
+  --bg:#15130f; --card:#1e1b16; --ink:#efeae1; --sub:#a29a8c; --line:#332e26;
+  --accent:#e0705c; --accent-soft:#2a1d19; --gold:#c9a76a; --ok:#6fbf95; --warn:#e0a84f;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35);
+}
+:root[data-theme="light"]{
+  --bg:#fbfaf8; --card:#fff; --ink:#1c1a17; --sub:#6b655c; --line:#e6e1d8;
+  --accent:#a8402f; --accent-soft:#f6ece9; --gold:#9a7b3f; --ok:#2f6b4f; --warn:#b0741c;
+  --shadow:0 1px 2px rgba(28,26,23,.05),0 8px 24px rgba(28,26,23,.06);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP","Yu Gothic",sans-serif;
+  font-size:16px; line-height:1.75; letter-spacing:.01em;
+  padding-bottom:env(safe-area-inset-bottom);
+}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+
+header.hero{
+  padding:32px 16px 20px; border-bottom:1px solid var(--line);
+  background:linear-gradient(180deg,var(--accent-soft),transparent);
+}
+.hero .kicker{font-size:12px;letter-spacing:.16em;color:var(--accent);font-weight:700;margin:0 0 8px}
+.hero h1{margin:0 0 6px;font-size:26px;line-height:1.3;letter-spacing:-.01em}
+.hero .meta{margin:0;color:var(--sub);font-size:13px}
+.conf{display:inline-block;margin-top:12px;font-size:11px;font-weight:700;letter-spacing:.08em;
+  color:var(--warn);border:1px solid currentColor;border-radius:999px;padding:3px 10px}
+
+nav.toc{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);
+  backdrop-filter:saturate(180%) blur(12px);-webkit-backdrop-filter:saturate(180%) blur(12px);
+  border-bottom:1px solid var(--line);}
+nav.toc ul{display:flex;gap:6px;overflow-x:auto;list-style:none;margin:0;padding:10px 16px;
+  scrollbar-width:none;-webkit-overflow-scrolling:touch}
+nav.toc ul::-webkit-scrollbar{display:none}
+nav.toc a{flex:0 0 auto;font-size:13px;font-weight:600;text-decoration:none;color:var(--sub);
+  border:1px solid var(--line);border-radius:999px;padding:7px 13px;background:var(--card);white-space:nowrap}
+nav.toc a:active{color:var(--accent);border-color:var(--accent)}
+
+section{padding:30px 0 6px;scroll-margin-top:64px}
+h2{font-size:20px;margin:0 0 4px;letter-spacing:-.01em;display:flex;align-items:baseline;gap:9px}
+h2 .n{font-size:12px;color:var(--accent);font-weight:800;letter-spacing:.1em}
+.lead{color:var(--sub);font-size:14px;margin:0 0 18px}
+h3{font-size:16px;margin:26px 0 8px;letter-spacing:-.01em}
+h4{font-size:14px;margin:18px 0 6px;color:var(--sub);letter-spacing:.02em}
+p{margin:0 0 13px}
+ul,ol{margin:0 0 13px;padding-left:1.25em}
+li{margin:0 0 6px}
+strong{font-weight:700}
+mark{background:var(--accent-soft);color:var(--ink);padding:1px 4px;border-radius:3px;font-weight:600}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:17px 16px;
+  margin:0 0 14px;box-shadow:var(--shadow)}
+.card.hi{border-color:var(--accent);border-width:1.5px}
+.card > :last-child{margin-bottom:0}
+.card h3:first-child,.card h4:first-child{margin-top:0}
+
+.pull{border-left:3px solid var(--accent);padding:2px 0 2px 14px;margin:0 0 14px;
+  color:var(--sub);font-size:14.5px;font-style:normal}
+.pull p{margin:0 0 6px}
+.pull p:last-child{margin:0}
+
+.tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.06em;
+  padding:3px 8px;border-radius:5px;vertical-align:middle;margin-right:6px}
+.t-p0{background:var(--accent);color:#fff}
+.t-p1{background:var(--gold);color:#fff}
+.t-chk{background:var(--warn);color:#fff}
+.t-ok{background:var(--ok);color:#fff}
+.t-no{background:var(--sub);color:var(--card)}
+
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 14px;
+  border:1px solid var(--line);border-radius:12px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:440px}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--accent-soft);font-weight:700;font-size:12px;letter-spacing:.04em;white-space:nowrap}
+tr:last-child td{border-bottom:none}
+td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;
+  margin:0 0 12px;overflow:hidden}
+summary{padding:14px 16px;font-weight:700;font-size:14.5px;cursor:pointer;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:10px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"＋";color:var(--accent);font-weight:800;flex:0 0 auto}
+details[open] summary::after{content:"−"}
+details[open] summary{border-bottom:1px solid var(--line)}
+.det-body{padding:15px 16px}
+.det-body > :last-child{margin-bottom:0}
+
+.kpi{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:0 0 14px}
+.kpi div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 14px}
+.kpi .k{font-size:11px;color:var(--sub);letter-spacing:.06em;margin:0 0 3px}
+.kpi .v{font-size:19px;font-weight:800;font-variant-numeric:tabular-nums;margin:0;letter-spacing:-.02em}
+.kpi .v small{font-size:12px;font-weight:600;color:var(--sub);margin-left:3px}
+
+.tl{list-style:none;padding:0;margin:0}
+.tl li{position:relative;padding:0 0 18px 22px;border-left:2px solid var(--line);margin:0}
+.tl li:last-child{border-left-color:transparent;padding-bottom:0}
+.tl li::before{content:"";position:absolute;left:-6px;top:6px;width:10px;height:10px;
+  border-radius:50%;background:var(--line)}
+.tl li.key::before{background:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
+.tl .d{font-size:12px;font-weight:800;color:var(--accent);letter-spacing:.04em;display:block}
+.tl .w{font-size:14.5px;display:block}
+.tl .who{font-size:12px;color:var(--sub)}
+
+footer{margin-top:34px;padding:22px 16px 40px;border-top:1px solid var(--line);
+  color:var(--sub);font-size:12px;text-align:center}
+.top{display:inline-block;margin-top:10px;font-size:12px;font-weight:700;color:var(--accent);text-decoration:none}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">焼肉事業 / 進行まとめ</p>
+    <h1>わびのや 再開計画<br>＆ 山王苑 ロードマップ</h1>
+    <p class="meta">2026年8月4日時点 ／ 担当整理版</p>
+    <span class="conf">社内限り・公開不可</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <ul>
+    <li><a href="#now">現在地</a></li>
+    <li><a href="#concept">コンセプト</a></li>
+    <li><a href="#target">ターゲット</a></li>
+    <li><a href="#seat">席構成</a></li>
+    <li><a href="#interior">内装</a></li>
+    <li><a href="#menu">看板メニュー</a></li>
+    <li><a href="#num">数字</a></li>
+    <li><a href="#build">工事・備品</a></li>
+    <li><a href="#sched">日程</a></li>
+    <li><a href="#sannoen">山王苑</a></li>
+    <li><a href="#todo">自分のタスク</a></li>
+  </ul>
+</nav>
+
+<div class="wrap">
+
+<section id="now">
+  <h2><span class="n">01</span>現在地</h2>
+  <p class="lead">口コミを一次情報で取った結果、前提が2つひっくり返った。</p>
+
+  <div class="card hi">
+    <h3>わびのやは2026年2月11日オープンの新店</h3>
+    <p>Googleクチコミに「2026年2月11日にオープンした焼肉屋さん」との記載。他の口コミも「オープン間もない」「オープンの翌日に伺った」と一致する。</p>
+    <p><mark>2月開業 → 5月に170万円 → 7月に改装休業</mark>。170万円は衰退した店の数字ではなく、<strong>開業4か月目の立ち上げ途中の数字</strong>。口コミが10〜15件しかないのも半年未満なら当然で、品質の欠陥説より<strong>単に認知が積み上がっていない</strong>という説明のほうが自然。</p>
+  </div>
+
+  <div class="card hi">
+    <h3>Googleマップが休業中なのに「営業中」のまま</h3>
+    <p>ホットペッパーは「改装のため休業中」と正しく出ているのに、Googleマップは営業中（営業終了13:30／再開18:00）と表示されている。<mark>客が来て閉まっている状態が今まさに起きている。</mark></p>
+  </div>
+
+  <h3>媒体の実態</h3>
+  <div class="scroll">
+  <table>
+    <tr><th>媒体</th><th>点数</th><th>口コミ</th><th>状態</th></tr>
+    <tr><td>Googleマップ</td><td class="num"><strong>★4.4</strong></td><td class="num">10件</td><td>営業中のまま（誤）／オーナー返信は運用済み</td></tr>
+    <tr><td>食べログ</td><td class="num">3.11</td><td class="num">15件</td><td>掲載保留中（保存182人）</td></tr>
+    <tr><td>ホットペッパー</td><td class="num">—</td><td class="num">0件</td><td>休業表示は正常／写真71枚</td></tr>
+  </table>
+  </div>
+  <p>★4.4は現状で最も強い資産。ここが誤表示で削られているのが一番もったいない。</p>
+
+  <details>
+    <summary>口コミの強み・弱み（一次情報）</summary>
+    <div class="det-body">
+      <h4>強み</h4>
+      <p>肉質／厚切り牛タン（看板として認識されている）／ランチのコスパ（ハラミ定食1,380円で120g・7切れ）／個室4室／「玄関で靴を脱いで洋室へ通される、だれかの自宅みたいな感覚」／接客の丁寧さ</p>
+      <h4>弱み</h4>
+      <ol>
+        <li><strong>入口が目立たない・看板がない</strong>（複数指摘）</li>
+        <li><strong>少人数でも注文しやすいセット・盛り合わせがない</strong> ← 客単価2,700円の直接の原因</li>
+        <li>内装のチープさ（改装で解消に向かっている）</li>
+        <li><strong>ロースターの加熱が遅い</strong>（設備マター）</li>
+        <li>靴を脱ぐ運用のハードル（両面ある）</li>
+      </ol>
+      <div class="pull">
+        <p>食べログの表示予算は夜5,000〜5,999円。実際の客単価は2,700円。<strong>客が想定の半分しか使っていない。</strong></p>
+      </div>
+    </div>
+  </details>
+</section>
+
+<section id="concept">
+  <h2><span class="n">02</span>コンセプト</h2>
+  <p class="lead">口コミに自然発生している言葉を、そのまま看板にする。</p>
+
+  <div class="card hi">
+    <p style="font-size:19px;font-weight:800;letter-spacing:-.01em;margin:0 0 8px">靴を脱いで上がる、ご近所の焼肉屋</p>
+    <p style="margin:0;color:var(--sub);font-size:14px">清澄白河で、靴を脱いで食べる焼肉。</p>
+  </div>
+
+  <div class="pull">
+    <p>玄関で靴を脱いで個室というか洋室へ通される、だれかの自宅みたいな感覚</p>
+    <p>店内はとてもアットホームな感じで過ごしやすい空間</p>
+  </div>
+  <p><strong>この体験は他の焼肉店が模倣できない。</strong> 一軒家・個室4室・靴を脱ぐという構造そのものが資産になっている。</p>
+
+  <div class="card">
+    <h3>「隠れ家」を捨てる</h3>
+    <p>公式サイトは今「清澄白河の隠れ家焼肉」を名乗っているが、<mark>これは新店にとって毒</mark>。「隠れ家」は知る人ぞ知る状態を肯定する言葉で、認知ゼロを正当化してしまう。実際、口コミの最大の弱みが「入口が目立たない」「看板がなく店舗感がない」。</p>
+    <p>隠れ家を気取れるのは繁盛してから。代わりに置くのは<strong>「ご近所の定番」</strong>。月に一度ではなく、週に一度来られる店。</p>
+  </div>
+</section>
+
+<section id="target">
+  <h2><span class="n">03</span>ターゲット層</h2>
+  <p class="lead">万人向けにせず、構造が噛み合う層に振り切る。</p>
+
+  <div class="card hi">
+    <h3>主：近隣の子育てファミリー</h3>
+    <p style="color:var(--sub);font-size:13px;margin:-4px 0 10px">徒歩・自転車・車で15分圏</p>
+    <ul>
+      <li><strong>個室4室</strong>。子供が騒いでも気兼ねしない</li>
+      <li><strong>靴を脱ぐ</strong>。乳幼児を床に下ろせる。ベビーカーも入れやすい</li>
+      <li><strong>一軒家・アットホーム</strong>。チェーン焼肉の喧騒がない</li>
+      <li><strong>駐車場2台</strong>。車移動のファミリーを取れる</li>
+      <li>清澄白河は新住民マンションが増え、子育て世帯が厚い</li>
+    </ul>
+    <p style="margin-bottom:0">靴を脱ぐ運用は口コミでハードルとしても出ているが、<mark>この層に対しては最大の強みに反転する</mark>。</p>
+  </div>
+
+  <div class="scroll">
+  <table>
+    <tr><th>副ターゲット</th><th>商品</th><th>場所</th></tr>
+    <tr><td>大人2人の普段使い（夫婦・カップル）</td><td>ペア盛り 4,500円・個室</td><td>2F個室</td></tr>
+    <tr><td><strong>一人焼肉</strong></td><td>ひとり盛り 2,500円</td><td>1F・2F</td></tr>
+    <tr><td>昼の軽食客（近隣勤務者・主婦・来街者）</td><td>定食・丼 780〜2,000円</td><td>1F・3F</td></tr>
+    <tr><td>テイクアウト</td><td>弁当 1,000円前後</td><td>—</td></tr>
+  </table>
+  </div>
+  <p><strong>一人焼肉を取れる焼肉店は少ない。</strong> 個室があり、ひとり盛りがあれば成立する。差別化になる。</p>
+
+  <details>
+    <summary>捨てるターゲットと、その理由</summary>
+    <div class="det-body">
+      <div class="scroll">
+      <table>
+        <tr><th>層</th><th>捨てる理由</th></tr>
+        <tr><td>会社帰りの飲み客</td><td>清澄白河は夜が静かでオフィス密度が低い。大森とは違う</td></tr>
+        <tr><td>アート・クリエイティブ層</td><td>焼肉と来店動機が結びつかない。美術館の来館者は焼肉を食べに来ない</td></tr>
+        <tr><td>遠方からの目的来店</td><td>認知ゼロ・目立たない外観で遠方客を取りに行くのは順番が違う</td></tr>
+      </table>
+      </div>
+    </div>
+  </details>
+</section>
+
+<section id="seat">
+  <h2><span class="n">04</span>席の構成</h2>
+  <p class="lead">改装で席は増えるが、同時に全部は開けない。</p>
+
+  <div class="card hi">
+    <p style="margin:0"><strong>焼肉は2Fの12〜15席に縛られるが、軽食なら30席すべて使える。</strong> 焼肉の売上には物理的な天井があり、超える分はロースターを使わない商品で作るしかない。ここから全部が決まる。</p>
+  </div>
+
+  <div class="scroll">
+  <table>
+    <tr><th>フロア</th><th>席数</th><th>昼</th><th>夜</th><th>開放</th></tr>
+    <tr><td>1F</td><td class="num">10席</td><td>軽食</td><td>ドリンク＋冷菜・待合</td><td><span class="tag t-ok">第1段階</span></td></tr>
+    <tr><td>2F</td><td class="num">約20席</td><td>軽食</td><td><strong>焼肉</strong></td><td><span class="tag t-ok">第1段階</span></td></tr>
+    <tr><td>3F</td><td class="num">約20席</td><td>軽食</td><td>予約・個室のみ</td><td><span class="tag t-p1">10月</span></td></tr>
+    <tr><td>テラス</td><td class="num">12席</td><td>軽食</td><td>ドリンク＋冷菜</td><td><span class="tag t-ok">第1段階</span></td></tr>
+  </table>
+  </div>
+
+  <p><strong>第1段階は1F・2F・テラスの約42席。</strong> 2Fが埋まらないうちに3Fを開ける意味がないし、3Fは200V・照明・換気扇と最も工事が重い。ただし<mark>テラスは夏のうちに開ける</mark>。工事は終わっているので、開けなければ季節ごと失う。</p>
+
+  <div class="card">
+    <h3>夜にフロアを開ける基準</h3>
+    <p style="margin-bottom:8px"><strong>席の有無ではなく、調理人の手が要るかどうかで決める。</strong></p>
+    <ul style="margin-bottom:0">
+      <li>手が要る＝焼肉・定食 → <strong>2Fのみ</strong></li>
+      <li>手が要らない＝ドリンク、キムチ・ナムル・サラダ・冷菜（仕込みで完結） → 1F・テラスも可</li>
+    </ul>
+  </div>
+  <p>この線を引いておけば、2Fが埋まったときの受け皿と夏のテラス需要は取れる。</p>
+</section>
+
+<section id="interior">
+  <h2><span class="n">05</span>内装の雰囲気</h2>
+  <p class="lead">味気なさの原因はほぼ照明。そして照明は今しか変えられない。</p>
+
+  <div class="card hi">
+    <p style="margin:0"><mark>照明の仕様決定は電気工事の発注前に置く。</mark> 3F照明は未取付なので器具も配線位置も選び直せるが、工事後は壁と天井を壊す話になる。</p>
+  </div>
+
+  <h3>全フロア共通</h3>
+  <div class="scroll">
+  <table>
+    <tr><th>項目</th><th>仕様</th></tr>
+    <tr><td>色温度</td><td><strong>電球色2700K以下に統一</strong>。昼白色が混ざると一気に事務所になる</td></tr>
+    <tr><td>配光</td><td>光源を低い位置に落とし卓上を照らす。天井全体を明るくしない</td></tr>
+    <tr><td>調光</td><td><strong>必須</strong>。昼の軽食は明るく、夜は落とす</td></tr>
+    <tr><td>間接照明</td><td>各フロア1〜2箇所。面で照らすと空間が広く柔らかく見える</td></tr>
+    <tr><td>素材</td><td>木・和紙・鉄・土。<strong>ツヤなし</strong></td></tr>
+    <tr><td>色調</td><td>家具・床・建具のトーンを揃える。バラバラが「味気なさ」の正体</td></tr>
+  </table>
+  </div>
+
+  <details>
+    <summary>フロア別の作り分け</summary>
+    <div class="det-body">
+      <h4>1F</h4>
+      <p>玄関と土間の延長。靴を脱ぐ導線がここにある。昼の軽食で使うのでやや明るめ。一人客が座りやすい配置。</p>
+      <h4>2F</h4>
+      <p><strong>手元を明るく、周囲を落とす。</strong> 肉が最も美味しく見える光にする。煙が回るので布物は最小限にして清掃性を優先。</p>
+      <h4>3F 和室</h4>
+      <p>最も「家」らしいフロア。障子と和紙の照明。子連れと宴会の主戦場。<mark>畳の上にロースターは火気の面で不可</mark>なので床仕様の確認が要る。</p>
+      <h4>3F 洋室</h4>
+      <p>リビングの感覚。ベンチソファ（W3800／W3500）はここ。ファミリーとグループ向け。</p>
+      <h4>テラス</h4>
+      <p><strong>電球色のストリングライトを張るだけで一気に画になる。</strong> 費用対効果が最も大きく、夜のテラス写真は媒体で最も強い一枚になる。</p>
+      <h4>撮りたくなる場所を1箇所</h4>
+      <p>全体を作り込むより1箇所を強くするほうが安くて効く。候補は<strong>3F和室の窓際</strong>、次点でテラス。</p>
+      <h4>費用の小さい順</h4>
+      <p>照明の色温度と配光 → 什器の色調統一 → アクセントウォール1面 → 装飾小物 → 造作</p>
+    </div>
+  </details>
+</section>
+
+<section id="menu">
+  <h2><span class="n">06</span>看板メニューの設計</h2>
+  <p class="lead">値上げは一切しない。頼みやすくするだけで単価が上がる。</p>
+
+  <div class="pull">
+    <p>品数やセットなどの少人数でも注文しやすいメニューがなく頼みづらかった</p>
+  </div>
+  <p>表示予算は夜5,000〜5,999円、実単価は2,700円。<strong>値付けの問題ではなく、頼みにくいから注文点数が伸びていない。</strong></p>
+
+  <div class="card">
+    <h3>第1層：集客のフック</h3>
+    <p style="margin-bottom:0"><strong>原価度外視の厚切り牛タン。</strong> 既存の看板をそのまま維持する。口コミで既に認識されており、新しい看板を作るより早い。役割は集客であって利益ではない。</p>
+  </div>
+
+  <div class="card hi">
+    <h3>第2層：単価の柱 — 盛り合わせ3段</h3>
+    <p style="color:var(--sub);font-size:13px;margin:-4px 0 10px">メニューの最上段に置く。これが客単価を作る本体。</p>
+    <div class="scroll">
+    <table>
+      <tr><th>商品</th><th>内容</th><th>価格</th></tr>
+      <tr><td>ひとり盛り</td><td>1人前</td><td class="num">¥2,500</td></tr>
+      <tr><td>ペア盛り</td><td>2人前</td><td class="num">¥4,500</td></tr>
+      <tr><td><strong>わびのや盛り</strong></td><td>3〜4人前・大皿</td><td class="num"><strong>¥6,800</strong></td></tr>
+    </table>
+    </div>
+    <p><strong>「わびのや盛り」がファミリーの標準注文になる。</strong>「これ1つ頼めば大体OK」という商品を作る。大皿で出して見た目のインパクトを持たせれば、そのまま媒体とSNSの写真になる。</p>
+    <p style="margin-bottom:0">「ひとり盛り」は口コミへの直接の回答であり、同時に一人焼肉という取りにくい層を開ける鍵にもなる。</p>
+  </div>
+
+  <div class="card">
+    <h3>第3層：利益の柱</h3>
+    <p style="margin-bottom:0"><strong>ホルモン盛り。</strong> 原価率が突出して低く、量で殴っても利益が残る唯一の玉。訴求軸は「あそこの盛り合わせ、ほんとに安いよね」。リピートの理由になる。</p>
+  </div>
+
+  <details>
+    <summary>昼の軽食（山王苑のランチ資産を流用）</summary>
+    <div class="det-body">
+      <p>山王苑がランチを止めたことで、<strong>開発済みのランチメニュー10種が遊んでいる</strong>。写真撮影・価格決定・チラシデザインまで完成しており、焼肉の仕入れをそのまま使って仕込みで完結する。<mark>開発ゼロ・撮影ゼロで昼のラインナップが揃う。</mark></p>
+      <div class="scroll">
+      <table>
+        <tr><th>商品</th><th>価格</th></tr>
+        <tr><td>牛すじ煮込みカレー</td><td class="num">¥780</td></tr>
+        <tr><td>牛丼 ／ ネギ塩豚カルビ丼</td><td class="num">¥800</td></tr>
+        <tr><td>生姜焼き定食</td><td class="num">¥900</td></tr>
+        <tr><td>焼肉カルビ丼 ／ ニンニク味噌 豚野菜</td><td class="num">¥950</td></tr>
+        <tr><td>牛ばら にんにく醤油焼き定食</td><td class="num">¥1,100</td></tr>
+        <tr><td><strong>ジューシーハラミ定食</strong></td><td class="num"><strong>¥1,400</strong></td></tr>
+        <tr><td>秘伝ダレ漬け 一本サガリ定食</td><td class="num">¥1,700</td></tr>
+        <tr><td>黄金たれ黒毛和牛カルビ定食</td><td class="num">¥2,000</td></tr>
+      </table>
+      </div>
+      <p>昼の看板は<strong>ハラミ定食</strong>（口コミで既に高評価）。2,000円の黒毛和牛カルビ定食を上限に置いて昼単価の天井を引き上げる。</p>
+      <h4>テイクアウト</h4>
+      <p style="margin-bottom:0">上の定食・丼をそのまま弁当に転用する。<strong>席を使わずに売上を積める唯一の手段。</strong> 弁当袋にチラシを同梱すればポスティング費用が不要になる。</p>
+    </div>
+  </details>
+</section>
+
+<section id="num">
+  <h2><span class="n">07</span>数字</h2>
+  <p class="lead">5月170万円に対して1.5倍／1.9倍を狙う。</p>
+
+  <div class="kpi">
+    <div><p class="k">2026年5月 実績</p><p class="v">170<small>万円</small></p></div>
+    <div><p class="k">客単価（現状）</p><p class="v">2,700<small>円</small></p></div>
+    <div><p class="k">短期 目標</p><p class="v">260<small>万円</small></p></div>
+    <div><p class="k">中期 目標</p><p class="v">330<small>万円</small></p></div>
+  </div>
+
+  <div class="scroll">
+  <table>
+    <tr><th></th><th>短期</th><th>中期</th></tr>
+    <tr><td>夜（2F焼肉）</td><td>15名 × ¥4,000<br>＝6.0万円/日</td><td>20名 × ¥4,000<br>＝8.0万円/日</td></tr>
+    <tr><td>昼（30席・軽食）</td><td>20名 × ¥1,300<br>＝2.6万円/日</td><td>25名 × ¥1,300<br>＝3.3万円/日</td></tr>
+    <tr><td>テイクアウト</td><td>15食 × ¥1,000<br>＝1.5万円/日</td><td>15食 × ¥1,000<br>＝1.5万円/日</td></tr>
+    <tr><td><strong>月商（26日）</strong></td><td class="num"><strong>約260万円</strong></td><td class="num"><strong>約330万円</strong></td></tr>
+  </table>
+  </div>
+  <p>単価4,000円は<strong>値上げではなく盛り合わせ導入による注文点数の回復</strong>で作る。表示予算5,000〜5,999円に対してはまだ下なので、無理な水準ではない。</p>
+</section>
+
+<section id="build">
+  <h2><span class="n">08</span>工事・購入備品</h2>
+  <p class="lead">漏れると再開後に手戻りするものを、法令まで含めて洗った。</p>
+
+  <div class="card hi">
+    <h3><span class="tag t-chk">要確認</span>進める前に潰す3点</h3>
+    <ol style="margin-bottom:0">
+      <li><strong>2Fの排気ダクトの出口はどこか</strong> — 3Fやテラス付近に出ていると新フロアが焼肉臭の中になる</li>
+      <li><strong>建物全体の契約電力に余裕があるか</strong> — 足りないと受電容量の増設で工期が跳ねる。唯一の工期リスク</li>
+      <li><strong>2Fの正確な席数（ロースター数）</strong> — 売上上限の試算が依存している</li>
+    </ol>
+  </div>
+
+  <details>
+    <summary>A. 電気工事（一括で発注する）</summary>
+    <div class="det-body">
+      <p>別発注にすると出張費が二重にかかる。1回の工事にまとめる。</p>
+      <ul style="margin-bottom:0">
+        <li>3F 200V専用回路（ロースター1台分）</li>
+        <li>3F 照明の取付・配線</li>
+        <li>3F 換気扇</li>
+        <li>3F 一般コンセント（清掃・什器用）</li>
+        <li>テラス 照明用電源</li>
+        <li>テラス 屋外用防水コンセント</li>
+        <li>1F レジ周り電源（レジ・プリンタ・決済端末）</li>
+        <li>各フロアの調光スイッチ</li>
+        <li>分電盤の増設（容量次第）</li>
+      </ul>
+    </div>
+  </details>
+
+  <details>
+    <summary>B. 排気・空調</summary>
+    <div class="det-body">
+      <ul style="margin-bottom:0">
+        <li><span class="tag t-chk">要確認</span>2F 排気ダクトの出口</li>
+        <li>2F 排気ダクトの点検・清掃、グリスフィルター交換</li>
+        <li>3F ロースター1台分の局所排気</li>
+        <li><span class="tag t-chk">要確認</span>3F 業務用エアコン（既存の有無）</li>
+        <li>テラス 送風機・扇風機（夏季）</li>
+        <li><strong>2F ロースターの加熱効率</strong> — 口コミで「なかなか加熱されない」。体験の根幹</li>
+      </ul>
+    </div>
+  </details>
+
+  <details>
+    <summary>C. 家具</summary>
+    <div class="det-body">
+      <div class="scroll">
+      <table>
+        <tr><th>場所</th><th>内容</th></tr>
+        <tr><td>1F</td><td>小テーブル W600×D750 ×5／チェア W400×D420 ×10</td></tr>
+        <tr><td>3F</td><td>小テーブル W650×D750 ×7／チェア ×7／<strong>ベンチソファ W3800・W3500</strong></td></tr>
+        <tr><td>テラス</td><td>テーブル750角 ×6／チェア ×12</td></tr>
+        <tr><td>共通</td><td>1Fレジカウンター／コート掛け・荷物カゴ・傘立て</td></tr>
+      </table>
+      </div>
+      <p style="margin-bottom:0"><mark>ベンチソファ W3800／W3500 は既製品にほぼ無いサイズで特注になり、リードタイムが読めない。開店の必需品ではないのでクリティカルパスから外す。</mark> 代替は、既製1800mm級を並べる／後日差し替え／自由が丘の褐色ソファを転用。</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>D〜F. 焼肉設備・テイクアウト・レジIT</summary>
+    <div class="det-body">
+      <h4>D. 焼肉設備</h4>
+      <ul><li>2Fロースター（既存・加熱効率の改善が必要）／3Fロースター1台（移設済み）</li><li>トング・焼き網の予備・網替え用バット（増席分）</li></ul>
+      <h4>E. 軽食・テイクアウト</h4>
+      <ul><li>弁当容器・テイクアウト袋・輪ゴム</li><li>ライスウォーマー／保温ジャー</li><li>丼・定食用の食器、お盆</li><li>ラベルプリンタ（消費期限・アレルギー表示）</li></ul>
+      <h4>F. レジ・IT</h4>
+      <ul style="margin-bottom:0">
+        <li>レジ端末・キャッシュドロア・レシートプリンタ・決済端末</li>
+        <li><span class="tag t-chk">要確認</span><strong>Wi-Fiが3Fとテラスまで届くか</strong>（要ならメッシュ中継機）</li>
+        <li>卓上QRスタンド（全卓分）</li>
+        <li><strong>呼び出しベル</strong>（3F・テラスは目が届かない）</li>
+        <li>予約管理（食べログ・ホットペッパー連動）</li>
+      </ul>
+    </div>
+  </details>
+
+  <details>
+    <summary>G〜I. 照明器具・外観サイン・什器</summary>
+    <div class="det-body">
+      <h4>G. 内装・照明器具</h4>
+      <ul><li>ペンダントライト（卓上用・全卓分）／間接照明（各フロア1〜2）／調光器</li><li>アクセントウォール（3F和室・洋室 各1面）</li><li>テラス ストリングライト（電球色）</li><li>カーテン／ブラインド／装飾（和紙・器・植栽）</li><li><span class="tag t-chk">要確認</span>和室の床仕様（ロースター周り）</li></ul>
+      <h4>H. 外観・サイン ← 口コミで最大の弱み</h4>
+      <ul><li><strong>和紙調の電飾看板</strong>（赤ちょうちんは使わない）</li><li><strong>壁面アッパーライト</strong></li><li>A型看板・立て看板／のれん／店頭のメニュー掲示</li><li>館内サイン（階数表示・トイレ・順路）— 3階建てで客を上げるなら必須</li></ul>
+      <h4>I. 什器・備品</h4>
+      <ul style="margin-bottom:0">
+        <li>卓上什器（タレ皿・調味料ラック・トング置き・ティッシュ）全卓分</li>
+        <li>食器・カトラリー・グラス（増席分）／おしぼり・紙エプロン</li>
+        <li><strong>スリッパ（増席分）</strong> — 靴を脱ぐ運用。数が足りないと回転で詰まる</li>
+        <li>清掃用品・ダスター</li>
+        <li><span class="tag t-chk">要確認</span>3F手洗い・シンク／3Fトイレ／配膳動線（階段のみかリフトがあるか）</li>
+      </ul>
+    </div>
+  </details>
+
+  <details open>
+    <summary>J. 法令・届出 ← 漏れが一番高くつく</summary>
+    <div class="det-body">
+      <div class="scroll">
+      <table>
+        <tr><th>項目</th><th>窓口</th></tr>
+        <tr><td>飲食店営業許可の<strong>変更届</strong>（席数・面積・レイアウト）</td><td>保健所</td></tr>
+        <tr><td><strong>消防用設備等の設置基準</strong>（収容人員が大きく増える）</td><td>消防署</td></tr>
+        <tr><td><strong>避難経路と誘導灯</strong>（3階を客席にすると要件が厳しくなる）</td><td>消防署</td></tr>
+        <tr><td><strong>用途変更</strong>（3F和室・洋室の客席転用）</td><td>建築指導課</td></tr>
+        <tr><td>テント・テラスが建築物に該当するか</td><td>建築指導課</td></tr>
+        <tr><td>火気使用設備の届出（3Fロースター）</td><td>消防署</td></tr>
+        <tr><td>深夜酒類提供飲食店営業（0時以降営業する場合）</td><td>警察署</td></tr>
+        <tr><td>テイクアウトの営業許可範囲</td><td>保健所</td></tr>
+      </table>
+      </div>
+      <p style="margin-bottom:0"><mark>工事の完了前に消防署へ相談する。</mark> 再開後に指摘を受けると是正まで営業できず、設備の漏れより高くつく。</p>
+    </div>
+  </details>
+</section>
+
+<section id="sched">
+  <h2><span class="n">09</span>日程</h2>
+  <p class="lead">再開日は金曜に置く。告知は2週間前から。</p>
+
+  <div class="card">
+    <p style="margin-bottom:0">休み明けの初日を最も客が来る曜日に当てて、初日から埋めて勢いと口コミを作る。当日告知では予約が入らないので、告知は<strong>再開日の2週間前</strong>から。電気工事は見積から施工まで2〜3週間、家具は発注から納品まで2〜4週間を見る。</p>
+  </div>
+
+  <h3>推奨：9/11（金）再開</h3>
+  <ul class="tl">
+    <li class="key"><span class="d">8/4（火）</span><span class="w"><strong>Googleマップを「一時休業」に変更</strong>＋投稿で「改装休業中・再開日は追って告知」</span><span class="who">自分</span></li>
+    <li><span class="d">8/5〜8/8</span><span class="w">現地確認3点（排気ダクトの出口／契約電力の余裕／2Fの席数）</span><span class="who">設備担当</span></li>
+    <li><span class="d">8/5〜8/8</span><span class="w">消防署へ事前相談（収容人員・避難経路・用途）</span><span class="who">設備・管理</span></li>
+    <li class="key"><span class="d">8/8（金）</span><span class="w"><strong>照明の器具と色温度を決定</strong> ← 工事発注前に必ず置く</span><span class="who">自分 → 設備</span></li>
+    <li class="key"><span class="d">8/11（火）</span><span class="w"><strong>電気工事を一括発注</strong>＋<strong>家具を発注</strong>（ベンチソファは切り離す）</span><span class="who">設備・現場</span></li>
+    <li><span class="d">8/11〜8/22</span><span class="w">盛り合わせ3種＋昼メニューの設計・試作・原価計算</span><span class="who">現場</span></li>
+    <li><span class="d">8/11〜</span><span class="w">食べログの掲載保留を解除</span><span class="who">自分（手順書）→現場</span></li>
+    <li><span class="d">8/18〜8/29</span><span class="w">電気工事の施工</span><span class="who">設備</span></li>
+    <li><span class="d">8/25</span><span class="w">外観サイン（電飾看板・アッパーライト）を発注</span><span class="who">自分 → 設備</span></li>
+    <li class="key"><span class="d">8/28（金）</span><span class="w"><strong>媒体に再開日を反映。第一報を告知</strong>（D-14）</span><span class="who">自分</span></li>
+    <li><span class="d">9/1</span><span class="w">予約受付を開始</span><span class="who">自分・現場</span></li>
+    <li><span class="d">9/1〜9/5</span><span class="w">家具の納品・設置、什器搬入、試運転</span><span class="who">現場</span></li>
+    <li><span class="d">9/4（金）</span><span class="w">改装後の写真撮影 → 媒体へ投入、HP更新</span><span class="who">自分</span></li>
+    <li><span class="d">9/8</span><span class="w">リマインド配信、近隣ポスティング開始</span><span class="who">自分</span></li>
+    <li class="key"><span class="d">9/11（金）</span><span class="w"><strong>再開（1F・2F・テラス／約42席）</strong></span><span class="who">—</span></li>
+    <li><span class="d">10月</span><span class="w">3Fを開放（実習生の戦力化に合わせて）</span><span class="who">現場</span></li>
+  </ul>
+
+  <div class="card hi">
+    <h3>日程を確定できない唯一の要因</h3>
+    <p style="margin-bottom:0"><strong>調理人が山王苑と取り合いになっている。</strong> 動かせる調理人は1人しかおらず、抜けば山王苑が回らない。実習生の戦力化は10月以降。わびのやの再開日と山王苑のランチ再開（9月）は同じ1人を奪い合う。<mark>これは資源配分の決裁マターなので、日程は握らずに論点として上げる。</mark>上の日程は「人員が確保できた場合」の逆算。</p>
+  </div>
+
+  <details>
+    <summary>前倒し案：9/4（金）</summary>
+    <div class="det-body">
+      <p style="margin-bottom:0">工事と家具が早ければ1週間前倒せる。ただし告知がD-14を切るため、予約が積み上がらないまま初日を迎えるリスクがある。売上ゼロの日を減らす効果と、初日が閑散とする損失を天秤にかける。</p>
+    </div>
+  </details>
+</section>
+
+<section id="sannoen">
+  <h2><span class="n">10</span>山王苑（大森）</h2>
+  <p class="lead">7/31でランチが止まり夜のみ。8月は仕込み期。</p>
+
+  <div class="scroll">
+  <table>
+    <tr><th>月</th><th>形態</th><th>月商目標</th><th>1日平均</th></tr>
+    <tr><td>8月</td><td>夜のみ</td><td class="num">250万円</td><td class="num">約9.6万円</td></tr>
+    <tr><td>9月</td><td>ランチ再開</td><td class="num">400万円</td><td class="num">約15.4万円</td></tr>
+    <tr><td>10月</td><td>通常</td><td class="num">600万円</td><td class="num">約23.1万円</td></tr>
+  </table>
+  </div>
+  <p>現状は夜のみで月商約198万円（金土15万円／その他3万円）。<strong>8月の実質的な打ち手は平日を3万円→5万円に引き上げる一点</strong>に集約される。金土は既に一定水準で、伸びしろは平日にある。</p>
+
+  <div class="card">
+    <h3>8月のKPIは売上ではない</h3>
+    <p>仕込み期を売上で測ると「未達の月」にしか見えず判断を誤る。先行指標で評価する。</p>
+    <ul style="margin-bottom:0">
+      <li><strong>食べログの掲載保留解除</strong> ← 単体で最大のレバー。保存6,104人が眠っている</li>
+      <li>Googleマップの営業時間から昼帯を削除＋「ランチは9月再開予定」を告知</li>
+      <li><strong>LINE公式（友だち95人）の起動</strong> ← 常連の呼び戻しに最も速くて安い</li>
+      <li>口コミ獲得の導線（卓上POP・会計時カードでレビューへQR誘導）</li>
+      <li>写真素材の撮り切り ← チラシ・食べログ・GBP・IG・ホットペッパーの共通ボトルネック</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>チラシは9月のランチ再開に合わせて刷る</h3>
+    <p style="margin-bottom:0">両面チラシ2,000部は<strong>まだ未入稿</strong>。夜のみの8月に撒いても訴求が弱くメニューも未確定で効率が悪い。表面のランチ面はそのまま使え、納品済みのランチポスターもラミ加工済みで保管が効く。<strong>捨てる必要がない。</strong></p>
+  </div>
+</section>
+
+<section id="todo">
+  <h2><span class="n">11</span>自分のタスク</h2>
+  <p class="lead">立ち位置は「成果物の納品者」に限定する。調整役は引き受けない。</p>
+
+  <div class="scroll">
+  <table>
+    <tr><th>優先</th><th>内容</th><th>期限</th></tr>
+    <tr><td><span class="tag t-p0">P0</span></td><td><strong>わびのや</strong>：Googleマップを一時休業に変更＋再開予定の告知</td><td>8/4</td></tr>
+    <tr><td><span class="tag t-p0">P0</span></td><td><strong>山王苑</strong>：Googleマップから昼帯を削除＋「ランチ9月再開」告知</td><td>8/4</td></tr>
+    <tr><td><span class="tag t-p0">P0</span></td><td>照明の器具と色温度の仕様決定</td><td>8/8</td></tr>
+    <tr><td><span class="tag t-p0">P0</span></td><td>食べログの掲載保留解除（2店とも）</td><td>8月中</td></tr>
+    <tr><td><span class="tag t-p1">P1</span></td><td><strong>家具を手放す</strong>。設計は納品済み、発注と決裁は現場の仕事</td><td>今週</td></tr>
+    <tr><td><span class="tag t-p1">P1</span></td><td>盛り合わせ3種のたたき台（内容・グラム数・価格）</td><td>8月中</td></tr>
+    <tr><td><span class="tag t-p1">P1</span></td><td>外観サイン（電飾看板・アッパーライト）の仕様</td><td>8/25</td></tr>
+    <tr><td><span class="tag t-p1">P1</span></td><td>媒体への再開告知（第一報→写真→リマインド）</td><td>8/28〜</td></tr>
+    <tr><td><span class="tag t-p1">P1</span></td><td>近隣ポスティングのチラシ設計</td><td>9/8</td></tr>
+    <tr><td><span class="tag t-p1">P1</span></td><td>山王苑：崩れたロードマップの取り下げを明文化</td><td>今週</td></tr>
+    <tr><td><span class="tag t-p1">P1</span></td><td>HPの時限項目の差し替え（クーポン期限が超過）</td><td>8月中</td></tr>
+  </table>
+  </div>
+
+  <div class="card">
+    <h3>やらないこと</h3>
+    <ul style="margin-bottom:0">
+      <li>媒体へのログイン操作の代行（手順書と文面までを納品物とする）</li>
+      <li>人と人の調整役</li>
+      <li>現場のオペ改善（人員配置・設備・仕入れ）への踏み込み</li>
+      <li>家具・工事の発注実務（設計とリストの提示までで切る）</li>
+      <li>再開日程の決裁（A/B/C案を並べて上げる）</li>
+    </ul>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <p>社内限り。実売上・目標・原価に関する記載を含むため取り扱い注意。<br>2026年8月4日時点の情報にもとづく。</p>
+    <a class="top" href="#now">▲ 先頭へ</a>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('nav.toc a').forEach(function(a){
+  a.addEventListener('click',function(){
+    document.querySelectorAll('nav.toc a').forEach(function(x){x.style.color='';x.style.borderColor='';});
+    a.style.color='var(--accent)'; a.style.borderColor='var(--accent)';
+  });
+});
+</script>
+</body>
+</html>
