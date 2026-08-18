@@ -124,6 +124,7 @@ em{font-style:normal;background:var(--ai-wash);padding:1px 5px;border-radius:2px
 .c-now{background:var(--ai);color:var(--panel)}
 .c-next{background:var(--ai-wash);color:var(--ai);box-shadow:inset 0 0 0 1px currentColor}
 .c-chk{background:var(--ochre-wash);color:var(--ochre);box-shadow:inset 0 0 0 1px currentColor}
+.c-done{background:var(--moss-wash);color:var(--moss);box-shadow:inset 0 0 0 1px currentColor}
 .c-set{background:var(--moss-wash);color:var(--moss);box-shadow:inset 0 0 0 1px currentColor}
 
 /* ── tables ───────────────────────────────────────────── */
@@ -213,7 +214,7 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
 
 <section id="now">
   <p class="eyebrow">現在地</p>
-  <h2 class="mincho">口コミを一次情報で取ったら、前提が2つひっくり返った</h2>
+  <h2 class="mincho">口コミ一次情報の確認結果</h2>
   <p class="deck">memory の記述だけで進めていた部分を、食べログ・Googleマップ・ホットペッパーの実データで置き換えた。</p>
 
   <div class="panel mark">
@@ -222,10 +223,10 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
     <p>つまり <em>2月開業 → 5月に170万円 → 7月に改装休業</em>。170万円は衰退した店の数字ではなく、<strong>開業4か月目の立ち上げ途中の数字</strong>。口コミが10〜15件しかないのも半年未満なら当然で、品質の欠陥説より<strong>単に認知が積み上がっていない</strong>という説明のほうが自然。</p>
   </div>
 
-  <div class="panel flag">
-    <h3>Googleマップが休業中なのに「営業中」のまま</h3>
-    <p>ホットペッパーは「改装のため休業中」と正しく出ているのに、Googleマップは営業中（営業終了13:30／再開18:00）と表示されている。</p>
-    <p><em>客が来て閉まっている状態が、今まさに起きている。</em></p>
+  <div class="panel mark">
+    <h3>Googleマップの表示状態</h3>
+    <p><strong>「臨時休業」に変更済み。</strong>閉業扱いにはなっておらず、最悪の事故は回避できている。★4.4・電話・wabiya.jpへのリンクも生きている。</p>
+    <p><span class="chip c-chk">要対応</span> <strong>営業時間が未設定</strong>（「営業時間を追加」の状態）。再開時に設定し直す作業が発生するので、D−14の媒体反映に含める。</p>
   </div>
 
   <h4>媒体の実態</h4>
@@ -233,13 +234,13 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
     <table>
       <thead><tr><th>媒体</th><th>点数</th><th>口コミ</th><th>状態</th></tr></thead>
       <tbody>
-        <tr><td>Googleマップ</td><td class="n"><strong>★4.4</strong></td><td class="n">10件</td><td>営業中のまま（誤）／オーナー返信は運用済み</td></tr>
+        <tr><td>Googleマップ</td><td class="n"><strong>★4.4</strong></td><td class="n">10件</td><td>臨時休業（正）／営業時間は未設定／オーナー返信は運用済み</td></tr>
         <tr><td>食べログ</td><td class="n">3.11</td><td class="n">15件</td><td>掲載保留中（保存182人）</td></tr>
         <tr><td>ホットペッパー</td><td class="n">—</td><td class="n">0件</td><td>休業表示は正常／写真71枚</td></tr>
       </tbody>
     </table>
   </div>
-  <p>★4.4は現状で最も強い資産。ここが誤表示で削られているのが一番もったいない。</p>
+  <p>★4.4は現状で最も強い資産。休業表示は正しく出ているので、再開時に営業時間を戻すだけで立ち上がる。</p>
 
   <details>
     <summary>口コミの強み・弱み（一次情報）</summary>
@@ -261,7 +262,7 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
 
 <section id="concept">
   <p class="eyebrow">コンセプト</p>
-  <h2 class="mincho">口コミに自然発生している言葉を、そのまま看板にする</h2>
+  <h2 class="mincho">口コミ由来の訴求ワード</h2>
 
   <div class="statement">
     <p class="big mincho">ご近所の、家みたいな焼肉屋</p>
@@ -275,7 +276,7 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
   <p><strong>この体験は他の焼肉店が模倣できない。</strong>3階建ての一軒家・個室4室という構造そのものが資産になっている。</p>
 
   <div class="panel mark">
-    <h3>土足仕様への変更は、方向として順方向</h3>
+    <h3>土足仕様への変更</h3>
     <p>靴を脱ぐ運用は廃止して土足に変更済み。失うのは「特別な家に上がる」という所作だが、<strong>得るものはコンセプトの本筋と噛み合っている</strong>。</p>
     <ul>
       <li><strong>ベビーカーをそのまま個室まで入れられる</strong> ── 子育てファミリーにはむしろ強化</li>
@@ -286,7 +287,7 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
   </div>
 
   <div class="panel flag">
-    <h3>媒体の説明文で土足化を明示する</h3>
+    <h3>媒体表記への反映</h3>
     <p><strong>口コミには「靴を脱いでスリッパに履き替えて店内へ」が残り続ける。</strong>古い口コミを読んで来た客が混乱するので、GBP・食べログ・ホットペッパー・HPの説明文に<em>「土足のままご利用いただけます」</em>を明記する。期待値のズレを放置すると、そのまま低評価になる。</p>
   </div>
 
@@ -299,7 +300,7 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
 
 <section id="target">
   <p class="eyebrow">ターゲット</p>
-  <h2 class="mincho">万人向けにせず、構造が噛み合う層に振り切る</h2>
+  <h2 class="mincho">主・従のターゲット</h2>
 
   <div class="panel mark">
     <h3>主 ── 近隣の子育てファミリー</h3>
@@ -346,7 +347,7 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
 
 <section id="seat">
   <p class="eyebrow">席の構成</p>
-  <h2 class="mincho">改装で席は増えるが、同時に全部は開けない</h2>
+  <h2 class="mincho">フロア別の席数と開放段階</h2>
 
   <div class="panel mark">
     <p><strong>焼肉は2Fの12〜15席に縛られるが、軽食なら30席すべて使える。</strong>焼肉の売上には物理的な天井があり、超える分はロースターを使わない商品で作るしかない。ここから全部が決まる。</p>
@@ -379,7 +380,7 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
 
 <section id="interior">
   <p class="eyebrow">内装</p>
-  <h2 class="mincho">味気なさの原因はほぼ照明。そして照明は今しか変えられない</h2>
+  <h2 class="mincho">照明の仕様</h2>
 
   <div class="panel flag">
     <p><em>今回固めるのは1Fの玄関と3Fの3部屋。</em>2Fは当面いじらない。<strong>照明の仕様決定は電気工事の発注前に置く。</strong>3F照明は未取付なので器具も配線位置も選び直せるが、工事後は壁と天井を壊す話になる。</p>
@@ -465,7 +466,7 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
 
 <section id="menu">
   <p class="eyebrow">看板メニュー</p>
-  <h2 class="mincho">値上げは一切しない。頼みやすくするだけで単価が上がる</h2>
+  <h2 class="mincho">単価設計と看板商品</h2>
 
   <div class="quote"><p>品数やセットなどの少人数でも注文しやすいメニューがなく頼みづらかった</p></div>
   <p>表示予算は夜5,000〜5,999円、実単価は2,700円。<strong>値付けの問題ではなく、頼みにくいから注文点数が伸びていない。</strong></p>
@@ -528,7 +529,7 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
 
 <section id="bench">
   <p class="eyebrow">フロア別ベンチマーク</p>
-  <h2 class="mincho">「狭いけど人気」の手本を、フロアごとに置く</h2>
+  <h2 class="mincho">フロア別の参照店</h2>
   <p class="deck">ランチの訴求軸がハンバーガーに変わったため、1Fの手本を定食からバーガー3店に差し替えた。テラス・3Fは清澄白河圏内、2F焼肉とバーガーの一部は都内全域から。選定軸は2つ ── ①空間の作り方（真似る対象）②集客の構造（学ぶ対象）。1店で両方を満たす店はないため、2Fは軸ごとに2店併記する。</p>
 
   <div class="tscroll">
@@ -574,7 +575,7 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
 
 <section id="pitch">
   <p class="eyebrow">昼の訴求軸</p>
-  <h2 class="mincho">看板を作る前に、昼に何を売る店として立つのかを決める</h2>
+  <h2 class="mincho">昼の主軸と副軸</h2>
   <p class="deck">口コミの最大の弱みが「入口が目立たない・看板がない」である以上、店頭の看板は最も費用対効果の高い媒体。ただし軸が決まらないと絵が定まらない。</p>
 
   <div class="statement">
@@ -609,7 +610,7 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
   </div>
 
   <div class="panel">
-    <h3>コーヒーは「質」ではなく「あること」を伝える</h3>
+    <h3>コーヒーの訴求</h3>
     <p>食後のコーヒーは<strong>プラス200円</strong>か、定食にセットで付ける。ドリンクはホールが出せるので調理人の手を使わない。質では戦わないが、<em>あると分かれば「カフェとしても使える」と認識される</em>。ここが「ほぼカフェ」の実質。</p>
   </div>
 
@@ -706,7 +707,7 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
 </section>
 <section id="num">
   <p class="eyebrow">数字</p>
-  <h2 class="mincho">5月170万円に対して1.5倍／1.9倍を狙う</h2>
+  <h2 class="mincho">月商目標（5月比 1.5倍／1.9倍）</h2>
 
   <div class="figs">
     <div><p class="lab">2026年5月 実績</p><p class="val">170<span>万円</span></p></div>
@@ -731,7 +732,7 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
 
 <section id="build">
   <p class="eyebrow">工事・購入備品</p>
-  <h2 class="mincho">漏れると再開後に手戻りするものを、法令まで含めて洗った</h2>
+  <h2 class="mincho">工事・備品・法令の洗い出し</h2>
 
   <div class="panel flag">
     <h3><span class="chip c-chk">要確認</span> 進める前に潰す3点</h3>
@@ -909,7 +910,7 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
 
 <section id="sched">
   <p class="eyebrow">日程</p>
-  <h2 class="mincho">推奨は9月11日（金）再開</h2>
+  <h2 class="mincho">再開日 9月11日（金）</h2>
   <p class="deck">再開日は金曜に置く。休み明けの初日を最も客が来る曜日に当てて、初日から埋めて勢いと口コミを作る。当日告知では予約が入らないので、告知は再開日の2週間前から。電気工事は見積から施工まで2〜3週間、家具は発注から納品まで2〜4週間を見る。</p>
 
   <ul class="tl">
@@ -950,7 +951,7 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
 
 <section id="sannoen">
   <p class="eyebrow">山王苑（大森）</p>
-  <h2 class="mincho">7月31日でランチが止まり夜のみ。8月は仕込み期</h2>
+  <h2 class="mincho">8月の位置づけと月商目標</h2>
 
   <div class="tscroll">
     <table>
@@ -976,23 +977,29 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
     </ul>
   </div>
 
+  <div class="panel flag">
+    <h3>Googleマップに昼帯が残っている</h3>
+    <p>8/18時点で<strong>「まもなく営業開始 11:30」の表示が生きている</strong>。ランチは7/31で止まっているので、<em>昼に来た客が閉まった店に当たる状態が続いている</em>。更新履歴は「電話によって更新（4週間前）」のままで、営業時間の変更は未着手。</p>
+    <p>★4.0・112件は無傷。低評価を踏まれる前に消すのが先。</p>
+  </div>
+
   <div class="panel">
-    <h3>チラシは9月のランチ再開に合わせて刷る</h3>
+    <h3>チラシの入稿時期</h3>
     <p>両面チラシ2,000部は<strong>まだ未入稿</strong>。夜のみの8月に撒いても訴求が弱くメニューも未確定で効率が悪い。表面のランチ面はそのまま使え、納品済みのランチポスターもラミ加工済みで保管が効く。<strong>捨てる必要がない。</strong></p>
   </div>
 </section>
 
 <section id="todo">
   <p class="eyebrow">自分のタスク</p>
-  <h2 class="mincho">立ち位置は「成果物の納品者」に限定する</h2>
+  <h2 class="mincho">担当範囲と優先順位</h2>
 
   <div class="tscroll">
     <table>
       <thead><tr><th>優先</th><th>内容</th><th>期限</th></tr></thead>
       <tbody>
-        <tr><td><span class="chip c-now">最優先</span></td><td><strong>わびのや</strong>：Googleマップを一時休業に変更＋再開予定の告知</td><td class="n">8/4</td></tr>
-        <tr><td><span class="chip c-now">最優先</span></td><td><strong>山王苑</strong>：Googleマップから昼帯を削除＋「ランチ9月再開」告知</td><td class="n">8/4</td></tr>
-        <tr><td><span class="chip c-now">最優先</span></td><td>照明の器具と色温度の仕様決定</td><td class="n">8/8</td></tr>
+        <tr><td><span class="chip c-done">済</span></td><td><strong>わびのや</strong>：Googleマップを一時休業に変更 ── <em>8/18確認・臨時休業で表示中</em>（再開時に営業時間の再設定が要る）</td><td class="n">8/4</td></tr>
+        <tr><td><span class="chip c-now">最優先</span></td><td><strong>山王苑</strong>：Googleマップから昼帯を削除＋「ランチ9月再開」告知 ── <em>8/18確認・11:30開店のまま未着手</em></td><td class="n">8/4</td></tr>
+        <tr><td><span class="chip c-now">最優先</span></td><td>照明の器具選定（方針は確定・調光見送り／1F玄関・3F 3部屋）</td><td class="n">8/8</td></tr>
         <tr><td><span class="chip c-now">最優先</span></td><td>食べログの掲載保留解除（2店とも）</td><td class="n">8月中</td></tr>
         <tr><td><span class="chip c-next">次</span></td><td><strong>家具を手放す</strong>。設計は納品済み、発注と決裁は現場の仕事</td><td class="n">今週</td></tr>
         <tr><td><span class="chip c-next">次</span></td><td>全媒体の説明文に「土足のままご利用いただけます」を明記</td><td class="n">8/28〜</td></tr>
