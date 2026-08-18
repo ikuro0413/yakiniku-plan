@@ -125,6 +125,17 @@ em{font-style:normal;background:var(--ai-wash);padding:1px 5px;border-radius:2px
 .c-next{background:var(--ai-wash);color:var(--ai);box-shadow:inset 0 0 0 1px currentColor}
 .c-chk{background:var(--ochre-wash);color:var(--ochre);box-shadow:inset 0 0 0 1px currentColor}
 .c-done{background:var(--moss-wash);color:var(--moss);box-shadow:inset 0 0 0 1px currentColor}
+.kv{margin:0 0 1.1rem}
+.kv>div{padding:.65rem 0;border-bottom:1px solid var(--rule-soft)}
+.kv>div:last-child{border-bottom:0}
+.kv dt{font-weight:700;margin:0 0 .2rem;color:var(--ink)}
+.kv dd{margin:0;color:var(--ink-2);line-height:1.65}
+.cards{display:grid;gap:.55rem;margin:0 0 1.1rem}
+.card{background:var(--sunk);border-radius:9px;padding:.7rem .85rem}
+.card .ct{font-weight:700;margin:0 0 .4rem;color:var(--ink)}
+.card .cf{display:flex;justify-content:space-between;align-items:baseline;gap:.9rem;margin:0;padding:.16rem 0;font-size:.93em;line-height:1.6}
+.card .cf .cl{flex:0 0 auto;color:var(--ink-3);font-size:.88em}
+.card .cf .cv{text-align:right;color:var(--ink-2)}
 .c-set{background:var(--moss-wash);color:var(--moss);box-shadow:inset 0 0 0 1px currentColor}
 
 /* ── tables ───────────────────────────────────────────── */
@@ -230,16 +241,26 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
   </div>
 
   <h4>媒体の実態</h4>
-  <div class="tscroll">
-    <table>
-      <thead><tr><th>媒体</th><th>点数</th><th>口コミ</th><th>状態</th></tr></thead>
-      <tbody>
-        <tr><td>Googleマップ</td><td class="n"><strong>★4.4</strong></td><td class="n">10件</td><td>臨時休業（正）／営業時間は未設定／オーナー返信は運用済み</td></tr>
-        <tr><td>食べログ</td><td class="n">3.11</td><td class="n">15件</td><td>掲載保留中（保存182人）</td></tr>
-        <tr><td>ホットペッパー</td><td class="n">—</td><td class="n">0件</td><td>休業表示は正常／写真71枚</td></tr>
-      </tbody>
-    </table>
-  </div>
+  <div class="cards">
+      <div class="card">
+        <p class="ct">Googleマップ</p>
+        <p class="cf"><span class="cl">点数</span><span class="cv"><strong>★4.4</strong></span></p>
+        <p class="cf"><span class="cl">口コミ</span><span class="cv">10件</span></p>
+        <p class="cf"><span class="cl">状態</span><span class="cv">臨時休業（正）／営業時間は未設定／オーナー返信は運用済み</span></p>
+      </div>
+      <div class="card">
+        <p class="ct">食べログ</p>
+        <p class="cf"><span class="cl">点数</span><span class="cv">3.11</span></p>
+        <p class="cf"><span class="cl">口コミ</span><span class="cv">15件</span></p>
+        <p class="cf"><span class="cl">状態</span><span class="cv">掲載保留中（保存182人）</span></p>
+      </div>
+      <div class="card">
+        <p class="ct">ホットペッパー</p>
+        <p class="cf"><span class="cl">点数</span><span class="cv">—</span></p>
+        <p class="cf"><span class="cl">口コミ</span><span class="cv">0件</span></p>
+        <p class="cf"><span class="cl">状態</span><span class="cv">休業表示は正常／写真71枚</span></p>
+      </div>
+    </div>
   <p>★4.4は現状で最も強い資産。休業表示は正しく出ているので、再開時に営業時間を戻すだけで立ち上がる。</p>
 
   <details>
@@ -315,32 +336,38 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
     <p><em>土足化でベビーカーの動線が通ったこと</em>は、この層に対して効く。</p>
   </div>
 
-  <div class="tscroll">
-    <table>
-      <thead><tr><th>副ターゲット</th><th>商品</th><th>場所</th></tr></thead>
-      <tbody>
-        <tr><td>大人2人の普段使い</td><td>ペア盛り 4,500円・個室</td><td>2F個室</td></tr>
-        <tr><td><strong>一人焼肉</strong></td><td>ひとり盛り 2,500円</td><td>1F・2F</td></tr>
-        <tr><td>昼の軽食客</td><td>定食・丼 780〜2,000円</td><td>1F・3F</td></tr>
-        <tr><td>テイクアウト</td><td>弁当 1,000円前後</td><td>—</td></tr>
-      </tbody>
-    </table>
-  </div>
+  <div class="cards">
+      <div class="card">
+        <p class="ct">大人2人の普段使い</p>
+        <p class="cf"><span class="cl">商品</span><span class="cv">ペア盛り 4,500円・個室</span></p>
+        <p class="cf"><span class="cl">場所</span><span class="cv">2F個室</span></p>
+      </div>
+      <div class="card">
+        <p class="ct"><strong>一人焼肉</strong></p>
+        <p class="cf"><span class="cl">商品</span><span class="cv">ひとり盛り 2,500円</span></p>
+        <p class="cf"><span class="cl">場所</span><span class="cv">1F・2F</span></p>
+      </div>
+      <div class="card">
+        <p class="ct">昼の軽食客</p>
+        <p class="cf"><span class="cl">商品</span><span class="cv">定食・丼 780〜2,000円</span></p>
+        <p class="cf"><span class="cl">場所</span><span class="cv">1F・3F</span></p>
+      </div>
+      <div class="card">
+        <p class="ct">テイクアウト</p>
+        <p class="cf"><span class="cl">商品</span><span class="cv">弁当 1,000円前後</span></p>
+        <p class="cf"><span class="cl">場所</span><span class="cv">—</span></p>
+      </div>
+    </div>
   <p><strong>一人焼肉を取れる焼肉店は少ない。</strong>個室があり、ひとり盛りがあれば成立する。差別化になる。</p>
 
   <details>
     <summary>捨てるターゲットと、その理由</summary>
     <div class="inner">
-      <div class="tscroll">
-        <table>
-          <thead><tr><th>層</th><th>捨てる理由</th></tr></thead>
-          <tbody>
-            <tr><td>会社帰りの飲み客</td><td>清澄白河は夜が静かでオフィス密度が低い。大森とは違う</td></tr>
-            <tr><td>アート・クリエイティブ層</td><td>焼肉と来店動機が結びつかない。美術館の来館者は焼肉を食べに来ない</td></tr>
-            <tr><td>遠方からの目的来店</td><td>認知ゼロ・目立たない外観で遠方客を取りに行くのは順番が違う</td></tr>
-          </tbody>
-        </table>
-      </div>
+      <dl class="kv">
+      <div><dt>会社帰りの飲み客</dt><dd>清澄白河は夜が静かでオフィス密度が低い。大森とは違う</dd></div>
+      <div><dt>アート・クリエイティブ層</dt><dd>焼肉と来店動機が結びつかない。美術館の来館者は焼肉を食べに来ない</dd></div>
+      <div><dt>遠方からの目的来店</dt><dd>認知ゼロ・目立たない外観で遠方客を取りに行くのは順番が違う</dd></div>
+    </dl>
     </div>
   </details>
 </section>
@@ -353,17 +380,36 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
     <p><strong>焼肉は2Fの12〜15席に縛られるが、軽食なら30席すべて使える。</strong>焼肉の売上には物理的な天井があり、超える分はロースターを使わない商品で作るしかない。ここから全部が決まる。</p>
   </div>
 
-  <div class="tscroll">
-    <table>
-      <thead><tr><th>フロア</th><th>席数</th><th>昼</th><th>夜</th><th>開放</th></tr></thead>
-      <tbody>
-        <tr><td>1F</td><td class="n">10席</td><td>軽食</td><td>ドリンク＋冷菜・待合</td><td><span class="chip c-now">第1段階</span></td></tr>
-        <tr><td>2F</td><td class="n">約20席</td><td>軽食</td><td><strong>焼肉</strong></td><td><span class="chip c-now">第1段階</span></td></tr>
-        <tr><td>3F</td><td class="n">約20席</td><td>軽食</td><td>予約・個室のみ</td><td><span class="chip c-next">10月</span></td></tr>
-        <tr><td>テラス</td><td class="n">12席</td><td>軽食</td><td>ドリンク＋冷菜</td><td><span class="chip c-now">第1段階</span></td></tr>
-      </tbody>
-    </table>
-  </div>
+  <div class="cards">
+      <div class="card">
+        <p class="ct">1F</p>
+        <p class="cf"><span class="cl">席数</span><span class="cv">10席</span></p>
+        <p class="cf"><span class="cl">昼</span><span class="cv">軽食</span></p>
+        <p class="cf"><span class="cl">夜</span><span class="cv">ドリンク＋冷菜・待合</span></p>
+        <p class="cf"><span class="cl">開放</span><span class="cv"><span class="chip c-now">第1段階</span></span></p>
+      </div>
+      <div class="card">
+        <p class="ct">2F</p>
+        <p class="cf"><span class="cl">席数</span><span class="cv">約20席</span></p>
+        <p class="cf"><span class="cl">昼</span><span class="cv">軽食</span></p>
+        <p class="cf"><span class="cl">夜</span><span class="cv"><strong>焼肉</strong></span></p>
+        <p class="cf"><span class="cl">開放</span><span class="cv"><span class="chip c-now">第1段階</span></span></p>
+      </div>
+      <div class="card">
+        <p class="ct">3F</p>
+        <p class="cf"><span class="cl">席数</span><span class="cv">約20席</span></p>
+        <p class="cf"><span class="cl">昼</span><span class="cv">軽食</span></p>
+        <p class="cf"><span class="cl">夜</span><span class="cv">予約・個室のみ</span></p>
+        <p class="cf"><span class="cl">開放</span><span class="cv"><span class="chip c-next">10月</span></span></p>
+      </div>
+      <div class="card">
+        <p class="ct">テラス</p>
+        <p class="cf"><span class="cl">席数</span><span class="cv">12席</span></p>
+        <p class="cf"><span class="cl">昼</span><span class="cv">軽食</span></p>
+        <p class="cf"><span class="cl">夜</span><span class="cv">ドリンク＋冷菜</span></p>
+        <p class="cf"><span class="cl">開放</span><span class="cv"><span class="chip c-now">第1段階</span></span></p>
+      </div>
+    </div>
 
   <p><strong>第1段階は1F・2F・テラスの約42席。</strong>2Fが埋まらないうちに3Fを開ける意味がないし、3Fは200V・照明・換気扇と最も工事が重い。ただし<em>テラスは夏のうちに開ける</em>。工事は終わっているので、開けなければ季節ごと失う。</p>
 
@@ -391,34 +437,39 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
   </div>
 
   <h4>調光の代わりに回路を3系統に分ける</h4>
-  <div class="tscroll">
-    <table>
-      <thead><tr><th>系統</th><th>対象</th><th>昼</th><th>夜</th></tr></thead>
-      <tbody>
-        <tr><td>A</td><td>全体灯（天井・既存）</td><td>点</td><td><strong>消</strong></td></tr>
-        <tr><td>B</td><td>卓上ペンダント</td><td>点</td><td>点</td></tr>
-        <tr><td>C</td><td>間接照明</td><td>消</td><td>点</td></tr>
-      </tbody>
-    </table>
-  </div>
+  <div class="cards">
+      <div class="card">
+        <p class="ct">A</p>
+        <p class="cf"><span class="cl">対象</span><span class="cv">全体灯（天井・既存）</span></p>
+        <p class="cf"><span class="cl">昼</span><span class="cv">点</span></p>
+        <p class="cf"><span class="cl">夜</span><span class="cv"><strong>消</strong></span></p>
+      </div>
+      <div class="card">
+        <p class="ct">B</p>
+        <p class="cf"><span class="cl">対象</span><span class="cv">卓上ペンダント</span></p>
+        <p class="cf"><span class="cl">昼</span><span class="cv">点</span></p>
+        <p class="cf"><span class="cl">夜</span><span class="cv">点</span></p>
+      </div>
+      <div class="card">
+        <p class="ct">C</p>
+        <p class="cf"><span class="cl">対象</span><span class="cv">間接照明</span></p>
+        <p class="cf"><span class="cl">昼</span><span class="cv">消</span></p>
+        <p class="cf"><span class="cl">夜</span><span class="cv">点</span></p>
+      </div>
+    </div>
   <p>スイッチにラベルを貼って運用を固定する。閉店後の清掃で全開にしたまま戻し忘れるのを防ぐ。</p>
 
   <h4>共通仕様</h4>
-  <div class="tscroll">
-    <table>
-      <thead><tr><th>項目</th><th>仕様</th></tr></thead>
-      <tbody>
-        <tr><td>色温度</td><td><strong>電球色2700K以下に統一</strong>。1灯でも昼白色が混ざると一気に事務所になる</td></tr>
-        <tr><td>演色性</td><td><strong>Ra90以上</strong>。Ra80だと生肉の赤が沈む。卓上だけ守れば十分で、間接はRa80でよい</td></tr>
-        <tr><td>明るさ</td><td><strong>40W相当（約485lm）から試す。</strong>調光がない以上、暗めに振る。明るすぎは致命的だが、暗いのは雰囲気になる</td></tr>
-        <tr><td>配光</td><td>シェード付きの下向き。光を卓面で止める。<strong>裸電球・グローブ型は使わない</strong></td></tr>
-        <tr><td>買い方</td><td><strong>器具と電球を分けて買う。</strong>性能は電球、見た目は器具。明るさを外しても電球1個で直せる</td></tr>
-        <tr><td>取付</td><td><strong>引掛シーリング式（プラグ式）。</strong>資格なしで付け外しでき、器具の選定を工事から切り離せる</td></tr>
-        <tr><td>素材</td><td>黒・真鍮・鉄・ガラス・濃色の木。<strong>ツヤなし</strong></td></tr>
-        <tr><td>色調</td><td>家具・床・建具のトーンを揃える。バラバラが「味気なさ」の正体</td></tr>
-      </tbody>
-    </table>
-  </div>
+  <dl class="kv">
+      <div><dt>色温度</dt><dd><strong>電球色2700K以下に統一</strong>。1灯でも昼白色が混ざると一気に事務所になる</dd></div>
+      <div><dt>演色性</dt><dd><strong>Ra90以上</strong>。Ra80だと生肉の赤が沈む。卓上だけ守れば十分で、間接はRa80でよい</dd></div>
+      <div><dt>明るさ</dt><dd><strong>40W相当（約485lm）から試す。</strong>調光がない以上、暗めに振る。明るすぎは致命的だが、暗いのは雰囲気になる</dd></div>
+      <div><dt>配光</dt><dd>シェード付きの下向き。光を卓面で止める。<strong>裸電球・グローブ型は使わない</strong></dd></div>
+      <div><dt>買い方</dt><dd><strong>器具と電球を分けて買う。</strong>性能は電球、見た目は器具。明るさを外しても電球1個で直せる</dd></div>
+      <div><dt>取付</dt><dd><strong>引掛シーリング式（プラグ式）。</strong>資格なしで付け外しでき、器具の選定を工事から切り離せる</dd></div>
+      <div><dt>素材</dt><dd>黒・真鍮・鉄・ガラス・濃色の木。<strong>ツヤなし</strong></dd></div>
+      <div><dt>色調</dt><dd>家具・床・建具のトーンを揃える。バラバラが「味気なさ」の正体</dd></div>
+    </dl>
 
   <h4>1F 玄関 ── 唯一「明るくする」場所</h4>
   <div class="panel">
@@ -445,6 +496,23 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
     </ul>
   </div>
 
+  <h4>テラス ── 費用対効果が最も大きい</h4>
+  <div class="panel">
+    <p><strong>夜のテラス写真は媒体で最も強い一枚になる。</strong>数千円〜1万円台の投資で画が変わるので、優先順位は3Fより上でもいい。工事は<em>防水コンセントを両端に2口出すだけ</em>。</p>
+    <ul>
+      <li><strong>主役はストリングライト（電球色・防雨）。</strong>テントのフレームに沿わせ、1本を往復させるのではなく<em>天井面を横断させて面を作る</em>。単線だと「配線」に見えるが、面になると「空間」に見える</li>
+      <li><strong>高さは頭上2.2m以上。</strong>通行の邪魔にならず、かつ<em>カメラを構えたとき画角に光の粒が入る</em>高さ。写真が目的なので、ここは意識して張る</li>
+      <li><strong>卓上にペンダントは吊れない。</strong>風と雨で無理。代わりに<strong>充電式のLEDランタン（電球色）を1卓1個</strong>置く。配線不要で、雨天と閉店時は片付けられる。テラス6卓ぶん</li>
+      <li><strong>明るさは店内よりさらに落とす。</strong>周囲が暗いので少ない光量で足りる。明るくすると外の暗さとの差が消えて「屋外にいる感じ」がなくなる。卓上が見えれば十分</li>
+      <li><strong>色温度は2700K以下で店内と揃える。</strong>ここだけ白いと建物の外側から見て安っぽくなる</li>
+      <li><strong>虫は光源の位置で減らす。</strong>光に寄るので、強い光は天井側のストリングに寄せ、卓上のランタンは最小限にする。客席での電撃殺虫器は使わない</li>
+      <li><strong>隣家への光漏れに配慮する。</strong>住宅地なので外向きの強い光は避ける。内側を照らして、外へは漏らさない</li>
+      <li><strong>自動点灯にする。</strong>看板・のぼりライトと同じタイマー（または明暗センサー）に乗せる。テラスは点け忘れが起きやすい</li>
+      <li>張りっぱなしにするなら<strong>常時屋外設置に耐える品</strong>を選ぶ。着脱を前提にすると必ず運用が止まる</li>
+    </ul>
+    <p><span class="chip c-chk">要確認</span> テント下のどこに固定点を取れるか。フレームに結束できるなら工事不要、できないならフックの取付を電気工事と同時に頼む。</p>
+  </div>
+
   <details>
     <summary>その他のフロアと進め方</summary>
     <div class="inner">
@@ -452,8 +520,6 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
       <p><strong>当面いじらない。</strong>既存器具があり、電球を電球色に替えるだけなら数千円でいつでもやれる。工事の発注とは無関係なので、クリティカルパスに乗せない。</p>
       <h4>1F 客席</h4>
       <p>土間の延長として作る。土足なので<strong>入口から席まで一直線に入れる</strong>のが強みになる。昼の軽食で使うのでやや明るめ。一人客が座りやすい配置。</p>
-      <h4>テラス</h4>
-      <p><strong>電球色のストリングライトを張るだけで一気に画になる。</strong>費用対効果が最も大きく、夜のテラス写真は媒体で最も強い一枚になる。工事は防水コンセントを両端に2口出すだけ。</p>
       <h4>1灯だけ先に買って現物で見る</h4>
       <p>色温度と明るさ、そして<strong>薄いグレーの壁への写り込み</strong>は商品写真では絶対にわからない。1灯を吊って確認してから残りをまとめ買いする。器具の到着は工事の後でよいので、この工程を挟んでも間に合う。</p>
       <h4>撮りたくなる場所を1箇所</h4>
@@ -481,15 +547,22 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
     <h4>単価の柱</h4>
     <h3>盛り合わせ 3段</h3>
     <p class="deck" style="margin:-4px 0 12px">メニューの最上段に置く。これが客単価を作る本体。</p>
-    <div class="tscroll">
-      <table>
-        <thead><tr><th>商品</th><th>内容</th><th>価格</th></tr></thead>
-        <tbody>
-          <tr><td>ひとり盛り</td><td>1人前</td><td class="n">¥2,500</td></tr>
-          <tr><td>ペア盛り</td><td>2人前</td><td class="n">¥4,500</td></tr>
-          <tr><td><strong>わびのや盛り</strong></td><td>3〜4人前・大皿</td><td class="n"><strong>¥6,800</strong></td></tr>
-        </tbody>
-      </table>
+    <div class="cards">
+      <div class="card">
+        <p class="ct">ひとり盛り</p>
+        <p class="cf"><span class="cl">内容</span><span class="cv">1人前</span></p>
+        <p class="cf"><span class="cl">価格</span><span class="cv">¥2,500</span></p>
+      </div>
+      <div class="card">
+        <p class="ct">ペア盛り</p>
+        <p class="cf"><span class="cl">内容</span><span class="cv">2人前</span></p>
+        <p class="cf"><span class="cl">価格</span><span class="cv">¥4,500</span></p>
+      </div>
+      <div class="card">
+        <p class="ct"><strong>わびのや盛り</strong></p>
+        <p class="cf"><span class="cl">内容</span><span class="cv">3〜4人前・大皿</span></p>
+        <p class="cf"><span class="cl">価格</span><span class="cv"><strong>¥6,800</strong></span></p>
+      </div>
     </div>
     <p><strong>「わびのや盛り」がファミリーの標準注文になる。</strong>「これ1つ頼めば大体OK」という商品を作る。大皿で出して見た目のインパクトを持たせれば、そのまま媒体とSNSの写真になる。</p>
     <p>「ひとり盛り」は口コミへの直接の回答であり、同時に一人焼肉という取りにくい層を開ける鍵にもなる。</p>
@@ -505,21 +578,16 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
     <summary>昼の軽食（山王苑のランチ資産を流用）</summary>
     <div class="inner">
       <p>山王苑がランチを止めたことで、<strong>開発済みのランチメニュー10種が遊んでいる</strong>。写真撮影・価格決定・チラシデザインまで完成しており、焼肉の仕入れをそのまま使って仕込みで完結する。<em>開発ゼロ・撮影ゼロで昼のラインナップが揃う。</em></p>
-      <div class="tscroll">
-        <table>
-          <thead><tr><th>商品</th><th>価格</th></tr></thead>
-          <tbody>
-            <tr><td>牛すじ煮込みカレー</td><td class="n">¥780</td></tr>
-            <tr><td>牛丼 ／ ネギ塩豚カルビ丼</td><td class="n">¥800</td></tr>
-            <tr><td>生姜焼き定食</td><td class="n">¥900</td></tr>
-            <tr><td>焼肉カルビ丼 ／ ニンニク味噌 豚野菜</td><td class="n">¥950</td></tr>
-            <tr><td>牛ばら にんにく醤油焼き定食</td><td class="n">¥1,100</td></tr>
-            <tr><td><strong>ジューシーハラミ定食</strong></td><td class="n"><strong>¥1,400</strong></td></tr>
-            <tr><td>秘伝ダレ漬け 一本サガリ定食</td><td class="n">¥1,700</td></tr>
-            <tr><td>黄金たれ黒毛和牛カルビ定食</td><td class="n">¥2,000</td></tr>
-          </tbody>
-        </table>
-      </div>
+      <dl class="kv">
+      <div><dt>牛すじ煮込みカレー</dt><dd>¥780</dd></div>
+      <div><dt>牛丼 ／ ネギ塩豚カルビ丼</dt><dd>¥800</dd></div>
+      <div><dt>生姜焼き定食</dt><dd>¥900</dd></div>
+      <div><dt>焼肉カルビ丼 ／ ニンニク味噌 豚野菜</dt><dd>¥950</dd></div>
+      <div><dt>牛ばら にんにく醤油焼き定食</dt><dd>¥1,100</dd></div>
+      <div><dt><strong>ジューシーハラミ定食</strong></dt><dd><strong>¥1,400</strong></dd></div>
+      <div><dt>秘伝ダレ漬け 一本サガリ定食</dt><dd>¥1,700</dd></div>
+      <div><dt>黄金たれ黒毛和牛カルビ定食</dt><dd>¥2,000</dd></div>
+    </dl>
       <p>昼の看板は<strong>ハラミ定食</strong>（口コミで既に高評価）。2,000円の黒毛和牛カルビ定食を上限に置いて昼単価の天井を引き上げる。</p>
       <h4>テイクアウト</h4>
       <p>上の定食・丼をそのまま弁当に転用する。<strong>席を使わずに売上を積める唯一の手段。</strong>弁当袋にチラシを同梱すればポスティング費用が不要になる。</p>
@@ -532,21 +600,64 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
   <h2 class="mincho">フロア別の参照店</h2>
   <p class="deck">ランチの訴求軸がハンバーガーに変わったため、1Fの手本を定食からバーガー3店に差し替えた。テラス・3Fは清澄白河圏内、2F焼肉とバーガーの一部は都内全域から。選定軸は2つ ── ①空間の作り方（真似る対象）②集客の構造（学ぶ対象）。1店で両方を満たす店はないため、2Fは軸ごとに2店併記する。</p>
 
-  <div class="tscroll">
-    <table>
-      <thead><tr><th>フロア</th><th>店</th><th>場所</th><th>軸</th><th>数字</th></tr></thead>
-      <tbody>
-        <tr><td><strong>ランチ＝バーガー（競合）</strong></td><td>Field</td><td>清澄白河 徒歩9分</td><td><strong>勝つ相手。¥1,700が通る証拠</strong></td><td>3.48・累計33万食・肉づくし¥1,694</td></tr>
-        <tr><td><strong>ランチ＝バーガー（商品の極点）</strong></td><td>シェイクツリー</td><td>両国・錦糸町</td><td>肉の塊感の極点</td><td>3.75・百名店3年連続・ワイルドアウト¥1,650</td></tr>
-        <tr><td><strong>ランチ＝バーガー（構造の手本）</strong></td><td>伏姫BURGER</td><td>千葉・館山</td><td><strong>肉の作り手がバーガーで立つ</strong></td><td>畜産直営・想定500個→実売1,000個/月</td></tr>
-        <tr><td><strong>テラス</strong></td><td>CLANN BY THE RIVER</td><td>清澄白河・隅田川沿い</td><td>テラス体験の設計</td><td>ランチ¥3,000帯。テラス＝商品</td></tr>
-        <tr><td><strong>3F カフェ</strong></td><td>ヒキダシ</td><td>清澄白河 徒歩6分</td><td>古民家空間×食事の単価</td><td>3.28・122件・<strong>保存12,373人</strong>。ランチ¥2,000</td></tr>
-        <tr><td><strong>2F 焼肉（空間）</strong></td><td>笑進笑明</td><td>自由が丘・築50年古民家</td><td>一軒家焼肉の体験設計</td><td>個室完備・コース¥6,600〜</td></tr>
-        <tr><td><strong>2F 焼肉（集客）</strong></td><td>炭火焼 ゆうじ</td><td>渋谷</td><td><strong>狭いのに超人気の極点</strong></td><td>食べログ4.12・百名店・予約困難</td></tr>
-        <tr><td><strong>2F 焼肉（商品構成・価格）</strong></td><td>焼肉とごはんの奇跡</td><td>船橋夏見・八王子</td><td><strong>盛り合わせ主役×米×ファミリーで¥4,000を成立させている実物</strong></td><td>A4-A5和牛・金の牛おまかせ盛り3品/5品・ハンバーグ定食</td></tr>
-      </tbody>
-    </table>
-  </div>
+  <div class="cards">
+      <div class="card">
+        <p class="ct"><strong>ランチ＝バーガー（競合）</strong></p>
+        <p class="cf"><span class="cl">店</span><span class="cv">Field</span></p>
+        <p class="cf"><span class="cl">場所</span><span class="cv">清澄白河 徒歩9分</span></p>
+        <p class="cf"><span class="cl">軸</span><span class="cv"><strong>勝つ相手。¥1,700が通る証拠</strong></span></p>
+        <p class="cf"><span class="cl">数字</span><span class="cv">3.48・累計33万食・肉づくし¥1,694</span></p>
+      </div>
+      <div class="card">
+        <p class="ct"><strong>ランチ＝バーガー（商品の極点）</strong></p>
+        <p class="cf"><span class="cl">店</span><span class="cv">シェイクツリー</span></p>
+        <p class="cf"><span class="cl">場所</span><span class="cv">両国・錦糸町</span></p>
+        <p class="cf"><span class="cl">軸</span><span class="cv">肉の塊感の極点</span></p>
+        <p class="cf"><span class="cl">数字</span><span class="cv">3.75・百名店3年連続・ワイルドアウト¥1,650</span></p>
+      </div>
+      <div class="card">
+        <p class="ct"><strong>ランチ＝バーガー（構造の手本）</strong></p>
+        <p class="cf"><span class="cl">店</span><span class="cv">伏姫BURGER</span></p>
+        <p class="cf"><span class="cl">場所</span><span class="cv">千葉・館山</span></p>
+        <p class="cf"><span class="cl">軸</span><span class="cv"><strong>肉の作り手がバーガーで立つ</strong></span></p>
+        <p class="cf"><span class="cl">数字</span><span class="cv">畜産直営・想定500個→実売1,000個/月</span></p>
+      </div>
+      <div class="card">
+        <p class="ct"><strong>テラス</strong></p>
+        <p class="cf"><span class="cl">店</span><span class="cv">CLANN BY THE RIVER</span></p>
+        <p class="cf"><span class="cl">場所</span><span class="cv">清澄白河・隅田川沿い</span></p>
+        <p class="cf"><span class="cl">軸</span><span class="cv">テラス体験の設計</span></p>
+        <p class="cf"><span class="cl">数字</span><span class="cv">ランチ¥3,000帯。テラス＝商品</span></p>
+      </div>
+      <div class="card">
+        <p class="ct"><strong>3F カフェ</strong></p>
+        <p class="cf"><span class="cl">店</span><span class="cv">ヒキダシ</span></p>
+        <p class="cf"><span class="cl">場所</span><span class="cv">清澄白河 徒歩6分</span></p>
+        <p class="cf"><span class="cl">軸</span><span class="cv">古民家空間×食事の単価</span></p>
+        <p class="cf"><span class="cl">数字</span><span class="cv">3.28・122件・<strong>保存12,373人</strong>。ランチ¥2,000</span></p>
+      </div>
+      <div class="card">
+        <p class="ct"><strong>2F 焼肉（空間）</strong></p>
+        <p class="cf"><span class="cl">店</span><span class="cv">笑進笑明</span></p>
+        <p class="cf"><span class="cl">場所</span><span class="cv">自由が丘・築50年古民家</span></p>
+        <p class="cf"><span class="cl">軸</span><span class="cv">一軒家焼肉の体験設計</span></p>
+        <p class="cf"><span class="cl">数字</span><span class="cv">個室完備・コース¥6,600〜</span></p>
+      </div>
+      <div class="card">
+        <p class="ct"><strong>2F 焼肉（集客）</strong></p>
+        <p class="cf"><span class="cl">店</span><span class="cv">炭火焼 ゆうじ</span></p>
+        <p class="cf"><span class="cl">場所</span><span class="cv">渋谷</span></p>
+        <p class="cf"><span class="cl">軸</span><span class="cv"><strong>狭いのに超人気の極点</strong></span></p>
+        <p class="cf"><span class="cl">数字</span><span class="cv">食べログ4.12・百名店・予約困難</span></p>
+      </div>
+      <div class="card">
+        <p class="ct"><strong>2F 焼肉（商品構成・価格）</strong></p>
+        <p class="cf"><span class="cl">店</span><span class="cv">焼肉とごはんの奇跡</span></p>
+        <p class="cf"><span class="cl">場所</span><span class="cv">船橋夏見・八王子</span></p>
+        <p class="cf"><span class="cl">軸</span><span class="cv"><strong>盛り合わせ主役×米×ファミリーで¥4,000を成立させている実物</strong></span></p>
+        <p class="cf"><span class="cl">数字</span><span class="cv">A4-A5和牛・金の牛おまかせ盛り3品/5品・ハンバーグ定食</span></p>
+      </div>
+    </div>
 
   <details>
     <summary>各店から何を学ぶか</summary>
@@ -615,56 +726,72 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
   </div>
 
   <h4>捨てる訴求軸</h4>
-  <div class="tscroll">
-    <table>
-      <thead><tr><th>軸</th><th>捨てる理由</th></tr></thead>
-      <tbody>
-        <tr><td>コーヒーの質・専門性</td><td>激戦区で勝ち目がない。戦う土俵を間違えている</td></tr>
-        <tr><td>おしゃれカフェ・映え</td><td>内装も立地もその勝負に向いていない。背伸びは見透かされる</td></tr>
-        <tr><td>最安値</td><td>安さで店格を下げると、夜の焼肉（客単価4,000円）と噛み合わなくなる</td></tr>
-      </tbody>
-    </table>
-  </div>
+  <dl class="kv">
+      <div><dt>コーヒーの質・専門性</dt><dd>激戦区で勝ち目がない。戦う土俵を間違えている</dd></div>
+      <div><dt>おしゃれカフェ・映え</dt><dd>内装も立地もその勝負に向いていない。背伸びは見透かされる</dd></div>
+      <div><dt>最安値</dt><dd>安さで店格を下げると、夜の焼肉（客単価4,000円）と噛み合わなくなる</dd></div>
+    </dl>
 
   <details open>
     <summary>店頭ポスターの構成</summary>
     <div class="inner">
       <p>看板の第一の仕事は<strong>「ここは何の店か」を通行人に分からせること</strong>。訴求はその次。外観が目立たず認知もゼロなので、順番を間違えない。</p>
-      <div class="tscroll">
-        <table>
-          <thead><tr><th>順</th><th>内容</th><th>意図</th></tr></thead>
-          <tbody>
-            <tr><td class="n">1</td><td><strong>一軒家の焼肉屋／昼は定食</strong></td><td>何の店かを1秒で伝える。ここが抜けると他が全部無駄になる</td></tr>
-            <tr><td class="n">2</td><td><strong>フック商品を大きく1〜2点</strong>（写真＋価格）</td><td>足を止める</td></tr>
-            <tr><td class="n">3</td><td>全メニューを小さく一覧＋価格</td><td>入る前に予算が読める＝入店の不安を消す</td></tr>
-            <tr><td class="n">4</td><td>入りやすさの合図</td><td>土足OK／個室あり／テラス席／おひとりさま歓迎／テイクアウト</td></tr>
-            <tr><td class="n">5</td><td>営業時間</td><td>—</td></tr>
-          </tbody>
-        </table>
+      <div class="cards">
+      <div class="card">
+        <p class="ct">1</p>
+        <p class="cf"><span class="cl">内容</span><span class="cv"><strong>一軒家の焼肉屋／昼は定食</strong></span></p>
+        <p class="cf"><span class="cl">意図</span><span class="cv">何の店かを1秒で伝える。ここが抜けると他が全部無駄になる</span></p>
       </div>
+      <div class="card">
+        <p class="ct">2</p>
+        <p class="cf"><span class="cl">内容</span><span class="cv"><strong>フック商品を大きく1〜2点</strong>（写真＋価格）</span></p>
+        <p class="cf"><span class="cl">意図</span><span class="cv">足を止める</span></p>
+      </div>
+      <div class="card">
+        <p class="ct">3</p>
+        <p class="cf"><span class="cl">内容</span><span class="cv">全メニューを小さく一覧＋価格</span></p>
+        <p class="cf"><span class="cl">意図</span><span class="cv">入る前に予算が読める＝入店の不安を消す</span></p>
+      </div>
+      <div class="card">
+        <p class="ct">4</p>
+        <p class="cf"><span class="cl">内容</span><span class="cv">入りやすさの合図</span></p>
+        <p class="cf"><span class="cl">意図</span><span class="cv">土足OK／個室あり／テラス席／おひとりさま歓迎／テイクアウト</span></p>
+      </div>
+      <div class="card">
+        <p class="ct">5</p>
+        <p class="cf"><span class="cl">内容</span><span class="cv">営業時間</span></p>
+        <p class="cf"><span class="cl">意図</span><span class="cv">—</span></p>
+      </div>
+    </div>
       <h4>フックは2点立てる</h4>
-      <div class="tscroll">
-        <table>
-          <thead><tr><th>役割</th><th>商品</th><th>価格</th></tr></thead>
-          <tbody>
-            <tr><td><strong>メインフック（訴求の主役）</strong></td><td>焼肉屋のハンバーガー（高橋さん案から確定）</td><td class="n">¥1,200〜1,500想定</td></tr>
-            <tr><td>価格フック（入りやすさ）</td><td>牛すじ煮込みカレー</td><td class="n">¥780</td></tr>
-          </tbody>
-        </table>
+      <div class="cards">
+      <div class="card">
+        <p class="ct"><strong>メインフック（訴求の主役）</strong></p>
+        <p class="cf"><span class="cl">商品</span><span class="cv">焼肉屋のハンバーガー（高橋さん案から確定）</span></p>
+        <p class="cf"><span class="cl">価格</span><span class="cv">¥1,200〜1,500想定</span></p>
       </div>
+      <div class="card">
+        <p class="ct">価格フック（入りやすさ）</p>
+        <p class="cf"><span class="cl">商品</span><span class="cv">牛すじ煮込みカレー</span></p>
+        <p class="cf"><span class="cl">価格</span><span class="cv">¥780</span></p>
+      </div>
+    </div>
       <p><strong>「1点を大きく＋全メニュー一覧」という山王苑ランチチラシの構造はそのまま流用。</strong>差し替わるのは主役の写真だけ。<em>ゼロから作らない。</em></p>
       <p>ハラミ定食¥1,400は口コミで高評価なので、一覧の中でやや大きく扱い品質の裏付けに使う。</p>
       <h4>面の割り当て ── 昼2面・夜1面</h4>
       <p><strong>A型看板2台＝表裏で4面。そのうち3面を使う。</strong>昼夜の入れ替えは差し替えではなく<em>裏返すだけ</em>にして、開店・閉店時のオペを軽くする。</p>
-      <div class="tscroll">
-        <table>
-          <thead><tr><th>台</th><th>表</th><th>裏</th></tr></thead>
-          <tbody>
-            <tr><td>看板A（歩道側・遠景）</td><td>昼① フック面</td><td><strong>夜① 焼肉面</strong></td></tr>
-            <tr><td>看板B（入口側・近景）</td><td>昼② 詳細面</td><td>4面目（予備）</td></tr>
-          </tbody>
-        </table>
+      <div class="cards">
+      <div class="card">
+        <p class="ct">看板A（歩道側・遠景）</p>
+        <p class="cf"><span class="cl">表</span><span class="cv">昼① フック面</span></p>
+        <p class="cf"><span class="cl">裏</span><span class="cv"><strong>夜① 焼肉面</strong></span></p>
       </div>
+      <div class="card">
+        <p class="ct">看板B（入口側・近景）</p>
+        <p class="cf"><span class="cl">表</span><span class="cv">昼② 詳細面</span></p>
+        <p class="cf"><span class="cl">裏</span><span class="cv">4面目（予備）</span></p>
+      </div>
+    </div>
       <p>昼は2台とも表を出す。夜は看板Aだけ裏返して1台出し、看板Bは引っ込める。</p>
 
       <h4>昼① フック面（歩道側・遠くから読ませる）</h4>
@@ -716,17 +843,28 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
     <div><p class="lab">中期 目標</p><p class="val">330<span>万円</span></p></div>
   </div>
 
-  <div class="tscroll">
-    <table>
-      <thead><tr><th></th><th>短期</th><th>中期</th></tr></thead>
-      <tbody>
-        <tr><td>夜（2F焼肉）</td><td>15名 × ¥4,000<br>＝6.0万円/日</td><td>20名 × ¥4,000<br>＝8.0万円/日</td></tr>
-        <tr><td>昼（30席・軽食）</td><td>20名 × ¥1,300<br>＝2.6万円/日</td><td>25名 × ¥1,300<br>＝3.3万円/日</td></tr>
-        <tr><td>テイクアウト</td><td>15食 × ¥1,000<br>＝1.5万円/日</td><td>15食 × ¥1,000<br>＝1.5万円/日</td></tr>
-        <tr><td><strong>月商（26日）</strong></td><td class="n"><strong>約260万円</strong></td><td class="n"><strong>約330万円</strong></td></tr>
-      </tbody>
-    </table>
-  </div>
+  <div class="cards">
+      <div class="card">
+        <p class="ct">夜（2F焼肉）</p>
+        <p class="cf"><span class="cl">短期</span><span class="cv">15名 × ¥4,000<br>＝6.0万円/日</span></p>
+        <p class="cf"><span class="cl">中期</span><span class="cv">20名 × ¥4,000<br>＝8.0万円/日</span></p>
+      </div>
+      <div class="card">
+        <p class="ct">昼（30席・軽食）</p>
+        <p class="cf"><span class="cl">短期</span><span class="cv">20名 × ¥1,300<br>＝2.6万円/日</span></p>
+        <p class="cf"><span class="cl">中期</span><span class="cv">25名 × ¥1,300<br>＝3.3万円/日</span></p>
+      </div>
+      <div class="card">
+        <p class="ct">テイクアウト</p>
+        <p class="cf"><span class="cl">短期</span><span class="cv">15食 × ¥1,000<br>＝1.5万円/日</span></p>
+        <p class="cf"><span class="cl">中期</span><span class="cv">15食 × ¥1,000<br>＝1.5万円/日</span></p>
+      </div>
+      <div class="card">
+        <p class="ct"><strong>月商（26日）</strong></p>
+        <p class="cf"><span class="cl">短期</span><span class="cv"><strong>約260万円</strong></span></p>
+        <p class="cf"><span class="cl">中期</span><span class="cv"><strong>約330万円</strong></span></p>
+      </div>
+    </div>
   <p>単価4,000円は<strong>値上げではなく盛り合わせ導入による注文点数の回復</strong>で作る。表示予算5,000〜5,999円に対してはまだ下なので、無理な水準ではない。</p>
 </section>
 
@@ -778,17 +916,12 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
   <details>
     <summary>C. 家具</summary>
     <div class="inner">
-      <div class="tscroll">
-        <table>
-          <thead><tr><th>場所</th><th>内容</th></tr></thead>
-          <tbody>
-            <tr><td>1F</td><td>小テーブル W600×D750 ×5／チェア W400×D420 ×10</td></tr>
-            <tr><td>3F</td><td>小テーブル W650×D750 ×7／チェア ×7／<strong>ベンチソファ W3800・W3500</strong></td></tr>
-            <tr><td>テラス</td><td>テーブル750角 ×6／チェア ×12</td></tr>
-            <tr><td>共通</td><td>1Fレジカウンター／コート掛け・荷物カゴ・傘立て</td></tr>
-          </tbody>
-        </table>
-      </div>
+      <dl class="kv">
+      <div><dt>1F</dt><dd>小テーブル W600×D750 ×5／チェア W400×D420 ×10</dd></div>
+      <div><dt>3F</dt><dd>小テーブル W650×D750 ×7／チェア ×7／<strong>ベンチソファ W3800・W3500</strong></dd></div>
+      <div><dt>テラス</dt><dd>テーブル750角 ×6／チェア ×12</dd></div>
+      <div><dt>共通</dt><dd>1Fレジカウンター／コート掛け・荷物カゴ・傘立て</dd></div>
+    </dl>
       <p><em>ベンチソファ W3800／W3500 は既製品にほぼ無いサイズで特注になり、リードタイムが読めない。開店の必需品ではないのでクリティカルパスから外す。</em>代替は、既製1800mm級を並べる／後日差し替え／自由が丘の褐色ソファを転用。</p>
     </div>
   </details>
@@ -818,7 +951,7 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
     <summary>G〜I. 照明器具・外観サイン・什器</summary>
     <div class="inner">
       <h4>G. 内装・照明器具</h4>
-      <ul><li>ペンダントライト（卓上用・全卓分・<strong>引掛シーリング式</strong>）／間接照明（棚下・窓際）</li><li>LED電球（2700K以下・Ra90以上・40W相当・E26）── <strong>器具と分けて買う</strong></li><li>玄関の足元灯＋自動点灯タイマー（または明暗センサー）</li><li>アクセントウォール（3F 1面）</li><li>テラス ストリングライト（電球色・防雨）</li><li>カーテン／ブラインド／装飾（器・植栽）</li></ul>
+      <ul><li>ペンダントライト（卓上用・全卓分・<strong>引掛シーリング式</strong>）／間接照明（棚下・窓際）</li><li>LED電球（2700K以下・Ra90以上・40W相当・E26）── <strong>器具と分けて買う</strong></li><li>玄関の足元灯＋自動点灯タイマー（または明暗センサー）</li><li>アクセントウォール（3F 1面）</li><li>テラス ストリングライト（電球色・防雨・常時屋外設置可）／<strong>充電式LEDランタン（電球色）×6</strong>（卓上用）</li><li>カーテン／ブラインド／装飾（器・植栽）</li></ul>
       <h4>H. 外観・サイン ── 口コミで最大の弱み</h4>
       <ul><li><strong>和紙調の電飾看板</strong>（赤ちょうちんは使わない）</li><li><strong>壁面アッパーライト</strong></li><li>A型看板・立て看板／のれん／店頭のメニュー掲示</li>
         <li><strong>A型看板の照射ライト（屋外スポット・防水）</strong> ── 夜に看板が読めなければ存在しないのと同じ</li>
@@ -870,39 +1003,29 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
         <li>便座の交換（温水洗浄がなければ）</li>
       </ul>
       <h4>ターゲットに直結する装備</h4>
-      <div class="tscroll">
-        <table>
-          <thead><tr><th>項目</th><th>状態</th></tr></thead>
-          <tbody>
-            <tr><td><strong>おむつ替えシート／ベビーチェア</strong></td><td><strong>子育てファミリーが主ターゲットなら必須級</strong>。焼肉屋でおむつ替えできる店は少なく、そのまま差別化になる</td></tr>
-            <tr><td>温水洗浄便座／手すり</td><td><span class="chip c-chk">要確認</span></td></tr>
-            <tr><td>ペーパーホルダー・サニタリーボックス</td><td><span class="chip c-chk">要確認</span></td></tr>
-            <tr><td>ハンドソープ／ペーパータオル／消臭</td><td>未</td></tr>
-            <tr><td>男女別か共用か／個数が席数に足りるか</td><td><span class="chip c-chk">要確認</span> 42席に対して足りるか</td></tr>
-          </tbody>
-        </table>
-      </div>
+      <dl class="kv">
+      <div><dt><strong>おむつ替えシート／ベビーチェア</strong></dt><dd><strong>子育てファミリーが主ターゲットなら必須級</strong>。焼肉屋でおむつ替えできる店は少なく、そのまま差別化になる</dd></div>
+      <div><dt>温水洗浄便座／手すり</dt><dd><span class="chip c-chk">要確認</span></dd></div>
+      <div><dt>ペーパーホルダー・サニタリーボックス</dt><dd><span class="chip c-chk">要確認</span></dd></div>
+      <div><dt>ハンドソープ／ペーパータオル／消臭</dt><dd>未</dd></div>
+      <div><dt>男女別か共用か／個数が席数に足りるか</dt><dd><span class="chip c-chk">要確認</span> 42席に対して足りるか</dd></div>
+    </dl>
       <p><em>おむつ替えシートがあるなら、媒体の設備欄とHPに必ず明記する。</em>書かないと存在しないのと同じ。</p>
     </div>
   </details>
   <details open>
     <summary>L. 法令・届出 ── 漏れが一番高くつく</summary>
     <div class="inner">
-      <div class="tscroll">
-        <table>
-          <thead><tr><th>項目</th><th>窓口</th></tr></thead>
-          <tbody>
-            <tr><td>飲食店営業許可の<strong>変更届</strong>（席数・面積・レイアウト）</td><td>保健所</td></tr>
-            <tr><td><strong>消防用設備等の設置基準</strong>（収容人員が大きく増える）</td><td>消防署</td></tr>
-            <tr><td><strong>避難経路と誘導灯</strong>（3階を客席にすると要件が厳しくなる）</td><td>消防署</td></tr>
-            <tr><td><strong>用途変更</strong>（3Fの客席転用）</td><td>建築指導課</td></tr>
-            <tr><td>テント・テラスが建築物に該当するか</td><td>建築指導課</td></tr>
-            <tr><td>火気使用設備の届出（3Fロースター）</td><td>消防署</td></tr>
-            <tr><td>深夜酒類提供飲食店営業（0時以降営業する場合）</td><td>警察署</td></tr>
-            <tr><td>テイクアウトの営業許可範囲</td><td>保健所</td></tr>
-          </tbody>
-        </table>
-      </div>
+      <dl class="kv">
+      <div><dt>飲食店営業許可の<strong>変更届</strong>（席数・面積・レイアウト）</dt><dd>保健所</dd></div>
+      <div><dt><strong>消防用設備等の設置基準</strong>（収容人員が大きく増える）</dt><dd>消防署</dd></div>
+      <div><dt><strong>避難経路と誘導灯</strong>（3階を客席にすると要件が厳しくなる）</dt><dd>消防署</dd></div>
+      <div><dt><strong>用途変更</strong>（3Fの客席転用）</dt><dd>建築指導課</dd></div>
+      <div><dt>テント・テラスが建築物に該当するか</dt><dd>建築指導課</dd></div>
+      <div><dt>火気使用設備の届出（3Fロースター）</dt><dd>消防署</dd></div>
+      <div><dt>深夜酒類提供飲食店営業（0時以降営業する場合）</dt><dd>警察署</dd></div>
+      <div><dt>テイクアウトの営業許可範囲</dt><dd>保健所</dd></div>
+    </dl>
       <p><em>工事の完了前に消防署へ相談する。</em>再開後に指摘を受けると是正まで営業できず、設備の漏れより高くつく。</p>
     </div>
   </details>
@@ -953,16 +1076,26 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
   <p class="eyebrow">山王苑（大森）</p>
   <h2 class="mincho">8月の位置づけと月商目標</h2>
 
-  <div class="tscroll">
-    <table>
-      <thead><tr><th>月</th><th>形態</th><th>月商目標</th><th>1日平均</th></tr></thead>
-      <tbody>
-        <tr><td>8月</td><td>夜のみ</td><td class="n">250万円</td><td class="n">約9.6万円</td></tr>
-        <tr><td>9月</td><td>ランチ再開</td><td class="n">400万円</td><td class="n">約15.4万円</td></tr>
-        <tr><td>10月</td><td>通常</td><td class="n">600万円</td><td class="n">約23.1万円</td></tr>
-      </tbody>
-    </table>
-  </div>
+  <div class="cards">
+      <div class="card">
+        <p class="ct">8月</p>
+        <p class="cf"><span class="cl">形態</span><span class="cv">夜のみ</span></p>
+        <p class="cf"><span class="cl">月商目標</span><span class="cv">250万円</span></p>
+        <p class="cf"><span class="cl">1日平均</span><span class="cv">約9.6万円</span></p>
+      </div>
+      <div class="card">
+        <p class="ct">9月</p>
+        <p class="cf"><span class="cl">形態</span><span class="cv">ランチ再開</span></p>
+        <p class="cf"><span class="cl">月商目標</span><span class="cv">400万円</span></p>
+        <p class="cf"><span class="cl">1日平均</span><span class="cv">約15.4万円</span></p>
+      </div>
+      <div class="card">
+        <p class="ct">10月</p>
+        <p class="cf"><span class="cl">形態</span><span class="cv">通常</span></p>
+        <p class="cf"><span class="cl">月商目標</span><span class="cv">600万円</span></p>
+        <p class="cf"><span class="cl">1日平均</span><span class="cv">約23.1万円</span></p>
+      </div>
+    </div>
   <p>現状は夜のみで月商約198万円（金土15万円／その他3万円）。<strong>8月の実質的な打ち手は平日を3万円→5万円に引き上げる一点</strong>に集約される。金土は既に一定水準で、伸びしろは平日にある。</p>
 
   <div class="panel mark">
@@ -993,26 +1126,73 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
   <p class="eyebrow">自分のタスク</p>
   <h2 class="mincho">担当範囲と優先順位</h2>
 
-  <div class="tscroll">
-    <table>
-      <thead><tr><th>優先</th><th>内容</th><th>期限</th></tr></thead>
-      <tbody>
-        <tr><td><span class="chip c-done">済</span></td><td><strong>わびのや</strong>：Googleマップを一時休業に変更 ── <em>8/18確認・臨時休業で表示中</em>（再開時に営業時間の再設定が要る）</td><td class="n">8/4</td></tr>
-        <tr><td><span class="chip c-now">最優先</span></td><td><strong>山王苑</strong>：Googleマップから昼帯を削除＋「ランチ9月再開」告知 ── <em>8/18確認・11:30開店のまま未着手</em></td><td class="n">8/4</td></tr>
-        <tr><td><span class="chip c-now">最優先</span></td><td>照明の器具選定（方針は確定・調光見送り／1F玄関・3F 3部屋）</td><td class="n">8/8</td></tr>
-        <tr><td><span class="chip c-now">最優先</span></td><td>食べログの掲載保留解除（2店とも）</td><td class="n">8月中</td></tr>
-        <tr><td><span class="chip c-next">次</span></td><td><strong>家具を手放す</strong>。設計は納品済み、発注と決裁は現場の仕事</td><td class="n">今週</td></tr>
-        <tr><td><span class="chip c-next">次</span></td><td>全媒体の説明文に「土足のままご利用いただけます」を明記</td><td class="n">8/28〜</td></tr>
-        <tr><td><span class="chip c-next">次</span></td><td>盛り合わせ3種のたたき台（内容・グラム数・価格）</td><td class="n">8月中</td></tr>
-        <tr><td><span class="chip c-next">次</span></td><td><strong>昼の訴求軸の確定と店頭ポスターの構成指示</strong>（新井さんへ）</td><td class="n">8/18</td></tr>
-        <tr><td><span class="chip c-next">次</span></td><td>外観サイン（電飾看板・アッパーライト）の仕様</td><td class="n">8/25</td></tr>
-        <tr><td><span class="chip c-next">次</span></td><td>媒体への再開告知（第一報→写真→リマインド）</td><td class="n">8/28〜</td></tr>
-        <tr><td><span class="chip c-next">次</span></td><td>近隣ポスティングのチラシ設計</td><td class="n">9/8</td></tr>
-        <tr><td><span class="chip c-next">次</span></td><td>山王苑：崩れたロードマップの取り下げを明文化</td><td class="n">今週</td></tr>
-        <tr><td><span class="chip c-next">次</span></td><td>HPの時限項目の差し替え（クーポン期限が超過）</td><td class="n">8月中</td></tr>
-      </tbody>
-    </table>
-  </div>
+  <div class="cards">
+      <div class="card">
+        <p class="ct"><span class="chip c-done">済</span></p>
+        <p class="cf"><span class="cl">内容</span><span class="cv"><strong>わびのや</strong>：Googleマップを一時休業に変更 ── <em>8/18確認・臨時休業で表示中</em>（再開時に営業時間の再設定が要る）</span></p>
+        <p class="cf"><span class="cl">期限</span><span class="cv">8/4</span></p>
+      </div>
+      <div class="card">
+        <p class="ct"><span class="chip c-now">最優先</span></p>
+        <p class="cf"><span class="cl">内容</span><span class="cv"><strong>山王苑</strong>：Googleマップから昼帯を削除＋「ランチ9月再開」告知 ── <em>8/18確認・11:30開店のまま未着手</em></span></p>
+        <p class="cf"><span class="cl">期限</span><span class="cv">8/4</span></p>
+      </div>
+      <div class="card">
+        <p class="ct"><span class="chip c-now">最優先</span></p>
+        <p class="cf"><span class="cl">内容</span><span class="cv">照明の器具選定（方針は確定・調光見送り／1F玄関・3F 3部屋）</span></p>
+        <p class="cf"><span class="cl">期限</span><span class="cv">8/8</span></p>
+      </div>
+      <div class="card">
+        <p class="ct"><span class="chip c-now">最優先</span></p>
+        <p class="cf"><span class="cl">内容</span><span class="cv">食べログの掲載保留解除（2店とも）</span></p>
+        <p class="cf"><span class="cl">期限</span><span class="cv">8月中</span></p>
+      </div>
+      <div class="card">
+        <p class="ct"><span class="chip c-next">次</span></p>
+        <p class="cf"><span class="cl">内容</span><span class="cv"><strong>家具を手放す</strong>。設計は納品済み、発注と決裁は現場の仕事</span></p>
+        <p class="cf"><span class="cl">期限</span><span class="cv">今週</span></p>
+      </div>
+      <div class="card">
+        <p class="ct"><span class="chip c-next">次</span></p>
+        <p class="cf"><span class="cl">内容</span><span class="cv">全媒体の説明文に「土足のままご利用いただけます」を明記</span></p>
+        <p class="cf"><span class="cl">期限</span><span class="cv">8/28〜</span></p>
+      </div>
+      <div class="card">
+        <p class="ct"><span class="chip c-next">次</span></p>
+        <p class="cf"><span class="cl">内容</span><span class="cv">盛り合わせ3種のたたき台（内容・グラム数・価格）</span></p>
+        <p class="cf"><span class="cl">期限</span><span class="cv">8月中</span></p>
+      </div>
+      <div class="card">
+        <p class="ct"><span class="chip c-next">次</span></p>
+        <p class="cf"><span class="cl">内容</span><span class="cv"><strong>昼の訴求軸の確定と店頭ポスターの構成指示</strong>（新井さんへ）</span></p>
+        <p class="cf"><span class="cl">期限</span><span class="cv">8/18</span></p>
+      </div>
+      <div class="card">
+        <p class="ct"><span class="chip c-next">次</span></p>
+        <p class="cf"><span class="cl">内容</span><span class="cv">外観サイン（電飾看板・アッパーライト）の仕様</span></p>
+        <p class="cf"><span class="cl">期限</span><span class="cv">8/25</span></p>
+      </div>
+      <div class="card">
+        <p class="ct"><span class="chip c-next">次</span></p>
+        <p class="cf"><span class="cl">内容</span><span class="cv">媒体への再開告知（第一報→写真→リマインド）</span></p>
+        <p class="cf"><span class="cl">期限</span><span class="cv">8/28〜</span></p>
+      </div>
+      <div class="card">
+        <p class="ct"><span class="chip c-next">次</span></p>
+        <p class="cf"><span class="cl">内容</span><span class="cv">近隣ポスティングのチラシ設計</span></p>
+        <p class="cf"><span class="cl">期限</span><span class="cv">9/8</span></p>
+      </div>
+      <div class="card">
+        <p class="ct"><span class="chip c-next">次</span></p>
+        <p class="cf"><span class="cl">内容</span><span class="cv">山王苑：崩れたロードマップの取り下げを明文化</span></p>
+        <p class="cf"><span class="cl">期限</span><span class="cv">今週</span></p>
+      </div>
+      <div class="card">
+        <p class="ct"><span class="chip c-next">次</span></p>
+        <p class="cf"><span class="cl">内容</span><span class="cv">HPの時限項目の差し替え（クーポン期限が超過）</span></p>
+        <p class="cf"><span class="cl">期限</span><span class="cv">8月中</span></p>
+      </div>
+    </div>
 
   <div class="panel">
     <h3>やらないこと</h3>
