@@ -136,8 +136,8 @@ em{font-style:normal;background:var(--ai-wash);padding:1px 5px;border-radius:2px
 .card .cf{display:flex;justify-content:space-between;align-items:baseline;gap:.9rem;margin:0;padding:.16rem 0;font-size:.93em;line-height:1.6}
 .card .cf .cl{flex:0 0 auto;color:var(--ink-3);font-size:.88em}
 .card .cf .cv{text-align:right;color:var(--ink-2)}
-.card .cf .cv a{color:var(--ai);font-weight:700;text-decoration:none;border-bottom:1px solid currentColor}
-.card .cf .cv a:hover{opacity:.75}
+.card .cf .cv a{color:var(--ink);font-weight:700;text-decoration:none;border-bottom:1px solid var(--ink-3)}
+.card .cf .cv a:hover{border-bottom-color:var(--ink)}
 .c-set{background:var(--moss-wash);color:var(--moss);box-shadow:inset 0 0 0 1px currentColor}
 
 /* ── tables ───────────────────────────────────────────── */
@@ -345,9 +345,9 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
         <p class="cf"><span class="cl">場所</span><span class="cv">2F個室</span></p>
       </div>
       <div class="card">
-        <p class="ct"><strong>一人焼肉</strong></p>
-        <p class="cf"><span class="cl">商品</span><span class="cv">ひとり盛り 2,500円</span></p>
-        <p class="cf"><span class="cl">場所</span><span class="cv">1F・2F</span></p>
+        <p class="ct"><strong>一人客</strong></p>
+        <p class="cf"><span class="cl">商品</span><span class="cv">定食・カレー等（<strong>焼肉以外</strong>）</span></p>
+        <p class="cf"><span class="cl">場所</span><span class="cv">1F広間・3F大広間</span></p>
       </div>
       <div class="card">
         <p class="ct">昼の軽食客</p>
@@ -360,7 +360,11 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
         <p class="cf"><span class="cl">場所</span><span class="cv">—</span></p>
       </div>
     </div>
-  <p><strong>一人焼肉を取れる焼肉店は少ない。</strong>個室があり、ひとり盛りがあれば成立する。差別化になる。</p>
+  <div class="panel flag">
+    <h3>一人客は焼肉では取らない</h3>
+    <p><strong>ロースターが全6台しかない。</strong>1台＝卓1つなので、<em>1人が1台を占有すると同じ卓で取れたはずの3〜4人分の売上機会が消える</em>。一人焼肉は席効率の面で成立しない。</p>
+    <p>そのうえで<strong>一人客は捨てない。定食・カレーなど焼肉以外で取る。</strong>ロースターを使わない商品なら席の制約を受けず、1F広間と3F大広間で通せる。焼肉の物理的な天井を超える分をロースター不要の商品で作る、という全体の設計とも噛み合う。</p>
+  </div>
 
   <details>
     <summary>今は取りに行かないターゲットと、その根拠</summary>
@@ -622,7 +626,7 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
       </div>
     </div>
     <p><strong>「わびのや盛り」がファミリーの標準注文になる。</strong>「これ1つ頼めば大体OK」という商品を作る。大皿で出して見た目のインパクトを持たせれば、そのまま媒体とSNSの写真になる。</p>
-    <p>「ひとり盛り」は口コミへの直接の回答であり、同時に一人焼肉という取りにくい層を開ける鍵にもなる。</p>
+    <p>「ひとり盛り」の役割は<strong>価格の下限を見せること</strong>と、<strong>少量の追加注文を受けること</strong>。一人焼肉を取りに行くための商品ではない（ロースターの台数で成立しない）。<span class="chip c-chk">要確認</span> 一人客を焼肉で取らないなら、この段を残すかどうかは再検討の余地がある。</p>
   </div>
 
   <div class="panel">
@@ -879,7 +883,7 @@ footer a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px so
         <li>帯：個室4室 ／ 土足OK ／ ご予約承ります</li>
         <li>営業時間</li>
       </ul>
-      <p><em>ひとり盛り¥2,500を出すこと自体が訴求になる。</em>「一人でも入れる」「その値段で食べられる」が同時に伝わる。</p>
+      <p><em>ひとり盛り¥2,500を出すこと自体が訴求になる。</em>価格の下限が見えることで「高そうで入れない」という最大の機会損失を潰せる。</p>
       <p>夜は<strong>壁面アッパーライトで看板を照らす</strong>。暗くて読めなければ存在しないのと同じ。</p>
 
       <h4>4面目（予備）と印刷仕様</h4>
